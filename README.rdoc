@@ -48,6 +48,8 @@ using Ruby-GetText-Package.
   
   task :updatepo do
     require 'gettext_activerecord/tools'
+    # Need to access DB to find Model table/column names.
+    # Use config/database.yml which is the same style with rails.
     GetText.update_pofiles("sample_ar", ["topic.rb"], "sample AR 1.0.0")
   end
 

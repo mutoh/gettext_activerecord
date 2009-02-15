@@ -52,6 +52,7 @@ class TestGetTextParser < Test::Unit::TestCase
     assert_equal(["Reply|Parent", "fixtures/reply.rb:-"], ary[11])
     assert_equal(["Reply|Replies count", "fixtures/reply.rb:-"], ary[12])
     assert_equal(["Reply|Title", "fixtures/reply.rb:-"], ary[13])
+    # this target is from N_().
     assert_equal(["Reply|Topic", "fixtures/reply.rb:4"], ary[14])
     assert_equal(["Reply|Type", "fixtures/reply.rb:-"], ary[15])
     assert_equal(["Reply|Written on", "fixtures/reply.rb:-"], ary[16])
