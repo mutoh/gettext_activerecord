@@ -1,0 +1,7 @@
+development:
+  adapter:   "mysql"
+  username:  "root"
+  password:  ""
+  encoding:  "utf8"
+  socket:  "/var/lib/mysql/mysql.sock"
+  database:  'sample'

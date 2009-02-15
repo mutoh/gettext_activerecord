@@ -16,6 +16,10 @@ require 'rake'
 require 'rake/packagetask'
 require 'rake/gempackagetask'
 require 'rake/rdoctask'
+
+gettext_path = File.join(ENV["GETTEXT_PATH"] || "../gettext/", "lib")
+$LOAD_PATH.unshift gettext_path
+
 require 'gettext_activerecord/version'
 
 PKG_VERSION = GetTextActiveRecord::VERSION

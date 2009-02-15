@@ -110,11 +110,11 @@ module GetText
       loaded_constants.each do |classname|
 	klass = eval(classname, TOPLEVEL_BINDING)
 	if klass.is_a?(Class) && klass < ActiveRecord::Base
-      puts "processing class #{klass.name}"
+          puts "processing class #{klass.name}"
 	  unless (klass.untranslate_all? || klass.abstract_class?)
-	    add_target(targets, file, ::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
+	    add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
 	    unless klass.class_name == classname
-	      add_target(targets, file, ::Inflector.singularize(classname.gsub(/_/, " ").downcase))
+	      add_target(targets, file, ActiveSupport::Inflector.singularize(classname.gsub(/_/, " ").downcase))
 	    end
 	    begin
 	      klass.columns.each do |column|
@@ -170,27 +170,30 @@ module GetText
 	      ENV["RAILS_ENV"] = @config[:db_mode]
 	      require 'config/boot.rb'
 	      require 'config/environment.rb'
-#	      require 'app/controllers/application.rb'
+	      require_rails 'activesupport'
+	      require_rails 'gettext_activerecord'
 	    rescue LoadError
 	      require_rails 'rubygems'
-# seems not to work, at least with my rubygems 1.3; is obsolete anyway, remove?
-#              if Kernel.respond_to? :gem
-                gem 'activerecord'
-#              else
-#                require_gem 'activerecord'
-#              end
+              gem 'activerecord'
+	      require_rails 'activesupport'
 	      require_rails 'active_record'
-	      require_rails 'gettext/active_record'
+	      require_rails 'activesupport'
+	      require_rails 'gettext_activerecord'
 	    end
-	    if @config[:adapter]
-	      ActiveRecord::Base.establish_connection(@config)
-	    else
-	      begin
-		yml = YAML.load(ERB.new(IO.read(@config[:db_yml])).result)
-	      rescue
-		return false
-	      end
-	    end
+            begin
+              yaml = YAML.load(IO.read(@config[:db_yml]))
+              if yaml[@config[:db_mode]]
+                ActiveRecord::Base.establish_connection(yaml[@config[:db_mode]])
+              else
+                ActiveRecord::Base.establish_connection(yaml)
+              end
+            rescue
+  	      if @config[:adapter]
+	        ActiveRecord::Base.establish_connection(@config)
+	      else
+                return false
+              end
+            end
 	  end
 	  @@db_loaded = true
 	  return true

@@ -1,0 +1,32 @@
+$LOAD_PATH.unshift "../lib"
+
+gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
+$LOAD_PATH.unshift gettext_path
+
+require 'rubygems'
+require 'gettext'
+
+desc "Create mo files"
+task :makemo do
+  require 'gettext_activerecord/tools'
+  GetText.create_mofiles
+end
+
+task :updatepo do
+  require 'gettext_activerecord/tools'
+  # Read Database information from "config/database.yml"
+  GetText.update_pofiles("sample_ar", ["book.rb"],
+                           "sample AR 1.0.0")
+end
+
+desc 'Build the MySQL test databases'
+task :createdb do
+  %x( mysqladmin -u root create sample )
+  %x( mysql -u root sample < db/create.sql )
+end
+
+desc 'Drop the MySQL test databases'
+task :dropdb do
+  %x( mysqladmin -u root -f drop sample )
+end
+

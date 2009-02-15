@@ -1,4 +1,5 @@
 $LOAD_PATH.unshift "../lib"
+require 'rubygems'
 
 gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
 $LOAD_PATH.unshift gettext_path
