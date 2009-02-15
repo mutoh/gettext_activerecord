@@ -43,8 +43,8 @@ task :updatepo do
                          ["fixtures/developer.rb", 
                           "fixtures/topic.rb",
                           "fixtures/reply.rb",
-                          "test_active_record.rb"],
-                         "active_record 1.0.0")
+                          "test_validations.rb"],
+                          "active_record 1.0.0")
 end
 
 desc 'Run all tests'

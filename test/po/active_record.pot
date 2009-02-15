@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: active_record 1.0.0\n"
-"POT-Creation-Date: 2008-08-03 02:19+0900\n"
+"POT-Creation-Date: 2009-02-16 02:51+0900\n"
 "PO-Revision-Date: 2006-08-09 01:51+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Topic|Terms of service"
 msgstr ""
 
-#: fixtures/topic.rb:36 test_active_record.rb:530
+#: fixtures/topic.rb:36 test_validations.rb:523
 msgid "must be abided"
 msgstr ""
 
@@ -212,182 +212,177 @@ msgstr ""
 msgid "is Wrong Update"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
+msgid "course"
+msgstr ""
+
+#: test_validations.rb:-
 msgid "inept wizard"
 msgstr ""
 
-#: test_active_record.rb:-
-msgid "conjurer"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Conjurer|Name"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Conjurer|City"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Conjurer|Type"
-msgstr ""
-
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "IneptWizard|Name"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "IneptWizard|City"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "IneptWizard|Type"
 msgstr ""
 
-#: test_active_record.rb:-
-msgid "thaumaturgist"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Thaumaturgist|Name"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Thaumaturgist|City"
-msgstr ""
-
-#: test_active_record.rb:-
-msgid "Thaumaturgist|Type"
-msgstr ""
-
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "person"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "protectedperson"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "ProtectedPerson|First name"
 msgstr ""
 
-#: test_active_record.rb:-
+#: test_validations.rb:-
 msgid "ProtectedPerson|Lock version"
 msgstr ""
 
-#: test_active_record.rb:416
+#: test_validations.rb:-
+msgid "conjurer"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Conjurer|Name"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Conjurer|City"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Conjurer|Type"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "thaumaturgist"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Thaumaturgist|Name"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Thaumaturgist|City"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Thaumaturgist|Type"
+msgstr ""
+
+#: test_validations.rb:409
 msgid "gotcha"
 msgstr ""
 
-#: test_active_record.rb:508
+#: test_validations.rb:501
 msgid "%{fn} must be abided"
 msgstr ""
 
-#: test_active_record.rb:726 test_active_record.rb:780
+#: test_validations.rb:719 test_validations.rb:773
 msgid "%{fn} is bad data"
 msgstr ""
 
-#: test_active_record.rb:747 test_active_record.rb:832
+#: test_validations.rb:740 test_validations.rb:825
 msgid "is bad data"
 msgstr ""
 
-#: test_active_record.rb:884
+#: test_validations.rb:877
 msgid "%{fn} can not be %{val}"
 msgstr ""
 
-#: test_active_record.rb:898
+#: test_validations.rb:891
 msgid "can not be %{val}"
 msgstr ""
 
-#: test_active_record.rb:946
+#: test_validations.rb:939
 msgid "%{fn} option %{val} is not in the list"
 msgstr ""
 
-#: test_active_record.rb:968
+#: test_validations.rb:961
 msgid "option %{val} is not in the list"
 msgstr ""
 
-#: test_active_record.rb:998
+#: test_validations.rb:991
 msgid "%{fn} option %{val} is restricted"
 msgstr ""
 
-#: test_active_record.rb:1020
+#: test_validations.rb:1013
 msgid "option %{val} is restricted"
 msgstr ""
 
-#: test_active_record.rb:1136 test_active_record.rb:1172
+#: test_validations.rb:1129 test_validations.rb:1165
 msgid "my string(%{fn}) is too short: %d"
 msgstr ""
 
-#: test_active_record.rb:1136 test_active_record.rb:1172
+#: test_validations.rb:1129 test_validations.rb:1165
 msgid "my string(%{fn}) is too long: %d"
 msgstr ""
 
-#: test_active_record.rb:1154 test_active_record.rb:1198
+#: test_validations.rb:1147 test_validations.rb:1191
 msgid "my string is too short: %d"
 msgstr ""
 
-#: test_active_record.rb:1154 test_active_record.rb:1198
+#: test_validations.rb:1147 test_validations.rb:1191
 msgid "my string is too long: %d"
 msgstr ""
 
-#: test_active_record.rb:1257
+#: test_validations.rb:1250
 msgid "%{fn} %d dayo"
 msgstr ""
 
-#: test_active_record.rb:1274
+#: test_validations.rb:1267
 msgid "%d dayo"
 msgstr ""
 
-#: test_active_record.rb:1300 test_active_record.rb:1334
-#: test_active_record.rb:1370 test_active_record.rb:1405
-#: test_active_record.rb:1441 test_active_record.rb:2016
-#: test_active_record.rb:2054 test_active_record.rb:2117
-#: test_active_record.rb:2157 test_active_record.rb:2183
-#: test_active_record.rb:2241 test_active_record.rb:2280
+#: test_validations.rb:1293 test_validations.rb:1327 test_validations.rb:1363
+#: test_validations.rb:1398 test_validations.rb:1434 test_validations.rb:2009
+#: test_validations.rb:2048 test_validations.rb:2111 test_validations.rb:2151
+#: test_validations.rb:2177 test_validations.rb:2235 test_validations.rb:2274
 msgid "%{fn} hoo %d"
 msgstr ""
 
-#: test_active_record.rb:1317 test_active_record.rb:1352
-#: test_active_record.rb:1388 test_active_record.rb:1423
-#: test_active_record.rb:1458 test_active_record.rb:1475
-#: test_active_record.rb:1492 test_active_record.rb:2035
-#: test_active_record.rb:2073 test_active_record.rb:2098
-#: test_active_record.rb:2137 test_active_record.rb:2203
-#: test_active_record.rb:2223 test_active_record.rb:2260
-#: test_active_record.rb:2300
+#: test_validations.rb:1310 test_validations.rb:1345 test_validations.rb:1381
+#: test_validations.rb:1416 test_validations.rb:1451 test_validations.rb:1468
+#: test_validations.rb:1485 test_validations.rb:2029 test_validations.rb:2067
+#: test_validations.rb:2092 test_validations.rb:2131 test_validations.rb:2197
+#: test_validations.rb:2217 test_validations.rb:2254 test_validations.rb:2294
 msgid "hoo %d"
 msgstr ""
 
-#: test_active_record.rb:1532
+#: test_validations.rb:1525
 msgid "%{fn} will never be valid"
 msgstr ""
 
-#: test_active_record.rb:1549
+#: test_validations.rb:1542
 msgid "will never be valid"
 msgstr ""
 
-#: test_active_record.rb:1573 test_active_record.rb:1619
-#: test_active_record.rb:1702 test_active_record.rb:1748
-#: test_active_record.rb:1787 test_active_record.rb:1825
-#: test_active_record.rb:1870 test_active_record.rb:1906
-#: test_active_record.rb:1953
+#: test_validations.rb:1566 test_validations.rb:1612 test_validations.rb:1695
+#: test_validations.rb:1741 test_validations.rb:1780 test_validations.rb:1818
+#: test_validations.rb:1863 test_validations.rb:1899 test_validations.rb:1946
 msgid "%{fn} contains 'single' and \"double\" quotes"
 msgstr ""
 
-#: test_active_record.rb:1596 test_active_record.rb:1644
-#: test_active_record.rb:1725 test_active_record.rb:1771
-#: test_active_record.rb:1809 test_active_record.rb:1847
-#: test_active_record.rb:1893 test_active_record.rb:1930
-#: test_active_record.rb:1984
+#: test_validations.rb:1589 test_validations.rb:1637 test_validations.rb:1718
+#: test_validations.rb:1764 test_validations.rb:1802 test_validations.rb:1840
+#: test_validations.rb:1886 test_validations.rb:1923 test_validations.rb:1977
 msgid "This string contains 'single' and \"double\" quotes"
 msgstr ""
 
-#: test_active_record.rb:2558
-msgid "smaller than %d"
+#: test_validations.rb:2548
+msgid "smaller than %{count}"
 msgstr ""
 
-#: test_active_record.rb:2565
-msgid "greater than %d"
+#: test_validations.rb:2555
+msgid "greater than %{count}"
 msgstr ""
