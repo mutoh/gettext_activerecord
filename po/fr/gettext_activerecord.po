@@ -1,0 +1,118 @@
+#
+# a po-file for Ruby-GetText-Package and Ruby on Rails.
+#
+# Copyright (C) 2005-2008 Masao Mutoh
+#
+# This file is distributed under the same license as the Ruby-GetText-Package.
+#
+# Vincent Isambart <vincent.isambart at gmail.com>, 2008
+# David Sulc <davidsulc at gmail.com>, 2006,2007
+# Laurent Sansonetti <lrz at chopine.be>, 2005,2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gettext_activerecord 0.1.0\n"
+"POT-Creation-Date: 2009-02-09 01:48+0900\n"
+"PO-Revision-Date: 2005-12-17 14:33+0900\n"
+"Last-Translator: Vincent Isambart\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+
+#: lib/gettext_activerecord/parser.rb:60
+msgid "'%{file}' is not found."
+msgstr ""
+
+#: lib/gettext_activerecord/parser.rb:104
+msgid "Ignored '%{file}'. Solve dependencies first."
+msgstr ""
+
+#: lib/gettext_activerecord/parser.rb:131
+msgid "No database is available."
+msgstr ""
+
+#: lib/gettext_activerecord/parser.rb:167
+msgid "rubygems are not found."
+msgstr ""
+
+#: lib/gettext_activerecord/active_record.rb:27
+msgid "Validation failed: %{error_messages}"
+msgstr "Validation échouée: %{error_messages}"
+
+#: lib/gettext_activerecord/active_record.rb:218
+msgid "%{fn} is not included in the list"
+msgstr "%{fn} n'est pas dans la liste"
+
+#: lib/gettext_activerecord/active_record.rb:219
+msgid "%{fn} is reserved"
+msgstr "%{fn} est réservé"
+
+#: lib/gettext_activerecord/active_record.rb:220
+msgid "%{fn} is invalid"
+msgstr "%{fn} est invalide"
+
+#: lib/gettext_activerecord/active_record.rb:221
+msgid "%{fn} doesn't match confirmation"
+msgstr "%{fn} ne correspond pas à la confirmation"
+
+#: lib/gettext_activerecord/active_record.rb:222
+msgid "%{fn} must be accepted"
+msgstr "%{fn} doit être accepté"
+
+#: lib/gettext_activerecord/active_record.rb:223
+msgid "%{fn} can't be empty"
+msgstr "%{fn} ne peut être vide"
+
+#: lib/gettext_activerecord/active_record.rb:224
+msgid "%{fn} can't be blank"
+msgstr "%{fn} ne peut être vierge"
+
+#: lib/gettext_activerecord/active_record.rb:225
+msgid "%{fn} is too long (maximum is %d characters)"
+msgstr "%{fn} est trop long (max. %d caractères)"
+
+#: lib/gettext_activerecord/active_record.rb:226
+msgid "%{fn} is too short (minimum is %d characters)"
+msgstr "%{fn} est trop court (min. %d caractères)"
+
+#: lib/gettext_activerecord/active_record.rb:227
+msgid "%{fn} is the wrong length (should be %d characters)"
+msgstr "%{fn} a une longueur incompatible (devrait être de %d caractères)"
+
+#: lib/gettext_activerecord/active_record.rb:228
+msgid "%{fn} has already been taken"
+msgstr "%{fn} est déjà pris"
+
+#: lib/gettext_activerecord/active_record.rb:229
+msgid "%{fn} is not a number"
+msgstr "%{fn} n'est pas un nombre"
+
+#: lib/gettext_activerecord/active_record.rb:230
+msgid "%{fn} must be greater than %d"
+msgstr "%{fn} doit être supérieur à %d"
+
+#: lib/gettext_activerecord/active_record.rb:231
+msgid "%{fn} must be greater than or equal to %d"
+msgstr "%{fn} doit être supérieur ou égal à %d"
+
+#: lib/gettext_activerecord/active_record.rb:232
+msgid "%{fn} must be equal to %d"
+msgstr "%{fn} doit être égal à %d"
+
+#: lib/gettext_activerecord/active_record.rb:233
+msgid "%{fn} must be less than %d"
+msgstr "%{fn} doit être inférieur à %d"
+
+#: lib/gettext_activerecord/active_record.rb:234
+msgid "%{fn} must be less than or equal to %d"
+msgstr "%{fn} doit être inférieur ou égal à %d"
+
+#: lib/gettext_activerecord/active_record.rb:235
+msgid "%{fn} must be odd"
+msgstr "%{fn} doit être impair"
+
+#: lib/gettext_activerecord/active_record.rb:236
+msgid "%{fn} must be even"
+msgstr "%{fn} doit être pair"

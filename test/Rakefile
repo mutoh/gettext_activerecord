@@ -1,0 +1,54 @@
+$LOAD_PATH.unshift "../lib"
+
+gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
+$LOAD_PATH.unshift gettext_path
+
+desc "Create mo files"
+task :makemo do
+  require 'gettext_activerecord/tools'
+  GetText.create_mofiles
+end
+
+SCHEMA_PATH = File.join(File.dirname(__FILE__), "db")
+
+desc 'Build the MySQL test databases'
+task :createdb do
+  %x( mysqladmin -u root create activerecord_unittest )
+  %x( mysqladmin -u root create activerecord_unittest2 )
+  %x( mysql -u root activerecord_unittest < #{File.join(SCHEMA_PATH, 'mysql.sql')} )
+end
+
+desc 'Drop the MySQL test databases'
+task :dropdb do
+  %x( mysqladmin -u root -f drop activerecord_unittest )
+  %x( mysqladmin -u root -f drop activerecord_unittest2 )
+end
+
+desc 'Rebuild the MySQL test databases'
+task :rebuilddb => [:dropdb, :createdb]
+
+desc "Update pot/po files for ActiveRecord test."
+task :updatepo do
+  require 'gettext_activerecord/tools'
+  GetText::ActiveRecordParser.init(
+    :adapter  => "mysql",
+    :username => "root",
+    :encoding => "utf8",
+    :activerecord_classes => ["ActiveRecord::Base", "Reply"],
+    :socket => "/var/lib/mysql/mysql.sock",
+    :database => 'activerecord_unittest'
+  )
+  GetText.update_pofiles("active_record", 
+                         ["fixtures/developer.rb", 
+                          "fixtures/topic.rb",
+                          "fixtures/reply.rb",
+                          "test_active_record.rb"],
+                         "active_record 1.0.0")
+end
+
+desc 'Run all tests'
+task :test do
+   Dir.glob("test_*.rb").each do |path|
+    ruby "-I../lib", "-I#{gettext_path}", "-rubygems", path rescue nil
+   end
+end
