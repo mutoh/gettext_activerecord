@@ -14,40 +14,24 @@ end
 
 SCHEMA_PATH = File.join(File.dirname(__FILE__), "db")
 
-desc 'Build the MySQL test databases'
-task :createdb do
-  %x( mysqladmin -u root create activerecord_unittest )
-  %x( mysqladmin -u root create activerecord_unittest2 )
-  %x( mysql -u root activerecord_unittest < #{File.join(SCHEMA_PATH, 'mysql.sql')} )
-end
-
-desc 'Drop the MySQL test databases'
-task :dropdb do
-  %x( mysqladmin -u root -f drop activerecord_unittest )
-  %x( mysqladmin -u root -f drop activerecord_unittest2 )
-end
-
-desc 'Rebuild the MySQL test databases'
-task :rebuilddb => [:dropdb, :createdb]
-
 desc "Update pot/po files for ActiveRecord test."
 task :updatepo do
-  require 'test/db/sqlite'
+  require 'activerecord'
+  require 'db/sqlite'
+  require 'db/migrate'
   require 'gettext_activerecord/tools'
   GetText::ActiveRecordParser.init(
-    :adapter  => "mysql",
-    :username => "root",
+    :adapter  => "sqlite3",
     :encoding => "utf8",
     :activerecord_classes => ["ActiveRecord::Base", "Reply"],
-    :socket => "/var/lib/mysql/mysql.sock",
-    :database => 'activerecord_unittest'
+    :database => ':memory:'
   )
-  GetText.update_pofiles("active_record", 
-                         ["models/developer.rb",
-                          "models/topic.rb",
-                          "models/reply.rb",
-                          "test_active_record.rb"],
-                         "active_record 1.0.0")
+  GetText.update_pofiles("active_record", [
+    "models/developer.rb",
+    "models/topic.rb",
+    "models/reply.rb",
+    "test_active_record.rb"
+  ], "active_record 1.0.0")
 end
 
 desc 'Run all tests'
