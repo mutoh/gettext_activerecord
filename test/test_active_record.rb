@@ -1,65 +1,12 @@
-$KCODE = "U"
-$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '/../lib')
-
-require 'rubygems'
-
-require 'active_record'
-ar_dir = $LOAD_PATH.select{|v| v =~ /gems\/activerecord-.*\/lib/}[0].sub(/lib$/, "")
-$LOAD_PATH.unshift File.join(ar_dir, "test")
-$LOAD_PATH.unshift File.join(ar_dir, "test/connections/native_mysql")
-require File.join(ar_dir, "test/cases/helper")
-
-begin
-  require 'gettext'
-rescue LoadError
-  $LOAD_PATH.unshift ENV["GETTEXT_LIB_PATH"] || "../../gettext/lib"
-  require 'gettext'
-end
-
+require 'helper.rb'
 require 'gettext_activerecord'
 require 'gettext_activerecord/parser'
 
-require 'fixtures/topic'
-require 'fixtures/reply'
-require 'fixtures/developer'
-require 'fixtures/wizard'
-require 'fixtures/inept_wizard'
-
-AR_TEST_VERSION = /activerecord-([^\/]+)/.match($:.join)[1]
-
-if AR_TEST_VERSION > "2.0.0"
-  #ticket 6657 on dev.rubyonrails.org require this but it becames removed(?)
-  AR_6657 = true
-else
-  AR_6657 = false
-end
-puts "The activerecord svn version is #{$1}"
-
-
-begin
-  `rake dropdb`
-rescue
-end
-begin
-  `rake createdb`
-rescue
-  p $!
-end
-
-ActiveRecord::Base.establish_connection(
-  :adapter  => "mysql",
-  :username => "root",
-  :password => "",
-  :encoding => "utf8",
-  :socket => "/var/lib/mysql/mysql.sock",
-  :database => 'activerecord_unittest'
-)
-
-# Make with_scope public for tests
-class << ActiveRecord::Base
-  public :with_scope, :with_exclusive_scope
-end
-
+require 'models/topic'
+require 'models/reply'
+require 'models/developer'
+require 'models/wizard'
+require 'models/inept_wizard'
 
 # The following methods in Topic are used in test_conditional_validation_*
 class Topic
@@ -78,6 +25,7 @@ class ProtectedPerson < ActiveRecord::Base
   attr_protected :first_name
 end
 
+# TODO rename to MockModel
 class MyModel
   attr_accessor :title
   def save; end

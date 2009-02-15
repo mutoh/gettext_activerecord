@@ -3,8 +3,11 @@ $LOAD_PATH.unshift "../lib"
 gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
 $LOAD_PATH.unshift gettext_path
 
+task :default => :test
+
 desc "Create mo files"
 task :makemo do
+  require 'activerecord'
   require 'gettext_activerecord/tools'
   GetText.create_mofiles
 end
@@ -29,6 +32,7 @@ task :rebuilddb => [:dropdb, :createdb]
 
 desc "Update pot/po files for ActiveRecord test."
 task :updatepo do
+  require 'test/db/sqlite'
   require 'gettext_activerecord/tools'
   GetText::ActiveRecordParser.init(
     :adapter  => "mysql",
@@ -39,16 +43,16 @@ task :updatepo do
     :database => 'activerecord_unittest'
   )
   GetText.update_pofiles("active_record", 
-                         ["fixtures/developer.rb", 
-                          "fixtures/topic.rb",
-                          "fixtures/reply.rb",
+                         ["models/developer.rb",
+                          "models/topic.rb",
+                          "models/reply.rb",
                           "test_active_record.rb"],
                          "active_record 1.0.0")
 end
 
 desc 'Run all tests'
 task :test do
-   Dir.glob("test_*.rb").each do |path|
+  Dir.glob("test_*.rb").each do |path|
     ruby "-I../lib", "-I#{gettext_path}", "-rubygems", path rescue nil
-   end
+  end
 end

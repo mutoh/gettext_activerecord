@@ -1,4 +1,4 @@
-require 'fixtures/topic'
+require 'models/topic'
 
 class Reply < Topic
   N_("Reply|Topic")  # Need to define relation table names explicity 
