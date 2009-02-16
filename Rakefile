@@ -9,7 +9,10 @@
 # This program is licenced under the same licence as Ruby.
 #
 
+#make lib and paralel gettext checkout available
 $LOAD_PATH.unshift "./lib"
+gettext_path = File.join(ENV["GETTEXT_PATH"] || "../gettext/", "lib")
+$LOAD_PATH.unshift gettext_path
 
 require 'rubygems'
 require 'rake'
