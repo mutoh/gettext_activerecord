@@ -2,11 +2,12 @@ require 'helper'
 
 require 'gettext_activerecord/tools'
 
-#setup the parser
-GetText::ActiveRecordParser.init(
-  :adapter  => 'sqlite3',
-  :database => ':memory:'
-)
+# setup the parser  
+# Don't need this because DB connection is established in helper.rb.
+#GetText::ActiveRecordParser.init(
+#  :adapter  => 'sqlite3',
+#  :database => ':memory:'
+#)
 
 class TestGetTextParser < Test::Unit::TestCase
   def test_class
