@@ -64,8 +64,6 @@ class Thaumaturgist < IneptWizard
 end
 
 class ValidationsTest < ActiveRecord::TestCase
-  fixtures :topics, :developers
-
   include GetText
   bindtextdomain_to(ActiveRecord, "active_record", :path => "locale")
 

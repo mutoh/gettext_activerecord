@@ -23,7 +23,7 @@ require 'db/sqlite'
 require 'db/migrate'
 
 # setup fixtures and AR testcase
-FIXTURES_ROOT = File.expand_path(File.dirname(__FILE__),'../fixtures')
+FIXTURES_ROOT = File.join(File.dirname(__FILE__),'fixtures')
 require 'active_record/fixtures'
 require 'active_record/test_case'
 
