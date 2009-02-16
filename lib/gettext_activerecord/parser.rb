@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 =begin
   lib/gettext_activerecord/parser.rb - parser for ActiveRecord
 
@@ -154,13 +153,12 @@ module GetText
       targets
     end
 
-    @@db_loaded = nil
     def target?(file) # :nodoc:
       init(nil) unless @ar_re
       data = IO.readlines(file)
       data.each do |v|
 	if @ar_re =~ v
-	  unless @@db_loaded
+	  unless ActiveRecord::Base.connected?
 	    begin
 	      require 'rubygems'
 	    rescue LoadError
@@ -195,7 +193,6 @@ module GetText
               end
             end
 	  end
-	  @@db_loaded = true
 	  return true
 	end
       end
