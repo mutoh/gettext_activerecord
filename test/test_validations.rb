@@ -1,6 +1,4 @@
-require 'helper.rb'
-require 'gettext_activerecord'
-require 'gettext_activerecord/parser'
+require 'helper'
 
 require 'models/topic'
 require 'models/reply'

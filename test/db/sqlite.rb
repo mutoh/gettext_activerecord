@@ -1,3 +1,10 @@
+#setup the parser
+GetText::ActiveRecordParser.init(
+  :adapter  => "sqlite3",
+  :database => ':memory:'
+)
+
+#create a connection
 ActiveRecord::Base.configurations = {"test" => {
   :adapter => "sqlite3",
   :database => ":memory:",

@@ -1,0 +1,9 @@
+= Sample for gettext_activerecord
+== USAGE
+(Install mysql first)
+
+$ Edit config/database.yml as you like
+$ rake createdb
+$ rake makemo
+$ ruby sample.rb
+  (or ruby -I/gettext/path/lib sample.rb)

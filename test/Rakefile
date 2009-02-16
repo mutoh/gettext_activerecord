@@ -1,4 +1,5 @@
 $LOAD_PATH.unshift "../lib"
+require 'rubygems'
 
 gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
 $LOAD_PATH.unshift gettext_path
@@ -30,7 +31,7 @@ task :updatepo do
     "models/developer.rb",
     "models/topic.rb",
     "models/reply.rb",
-    "test_active_record.rb"
+    "test_validations.rb"
   ], "active_record 1.0.0")
 end
 
