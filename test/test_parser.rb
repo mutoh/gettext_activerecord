@@ -2,6 +2,12 @@ require 'helper'
 
 require 'gettext_activerecord/tools'
 
+#setup the parser
+GetText::ActiveRecordParser.init(
+  :adapter  => 'sqlite3',
+  :database => ':memory:'
+)
+
 class TestGetTextParser < Test::Unit::TestCase
   def test_class
     GetText::ActiveRecordParser.target?("models/topic.rb")

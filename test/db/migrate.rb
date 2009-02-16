@@ -2,10 +2,10 @@ ActiveRecord::Schema.define(:version => 1) do
   create_table :topics do |t|
     t.string :title, :author_name, :author_email_address
     t.datetime :written_on
-    t.date :last_read
     t.timestamp :bonus_time
-    t.boolean :approved
+    t.date :last_read
     t.text :content
+    t.boolean :approved
     t.integer :replies_count, :default=>0, :null=>false
     t.integer :parent_id
     t.string :type, :limit=>50

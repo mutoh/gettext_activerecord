@@ -17,7 +17,6 @@ end
 require 'gettext_activerecord'
 
 # load database and setup parser
-require 'gettext_activerecord/parser'
 require 'db/sqlite'
 #require 'db/mysql'
 require 'db/migrate'
