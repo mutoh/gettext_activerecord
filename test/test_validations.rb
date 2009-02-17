@@ -6,6 +6,18 @@ require 'models/developer'
 require 'models/wizard'
 require 'models/inept_wizard'
 
+# the cases/repairhelper is missing in the current AR 2.2.2 release
+# try to get it or load our copy
+ar_dir = $LOAD_PATH.select{|v| v =~ /gems\/activerecord-.*\/lib/}[0].sub(/lib$/, "")
+if File.exist?(File.join(ar_dir,'test','cases','repair_helper.rb'))
+  #make the AR/test dir available, and load
+  $LOAD_PATH.unshift File.join(ar_dir, "test")
+  require 'cases/repair_helper'
+else
+  require 'vendor/repair_helper'
+end
+include ActiveRecord::Testing::RepairHelper
+
 # The following methods in Topic are used in test_conditional_validation_*
 class Topic
   def condition_is_true

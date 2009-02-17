@@ -21,7 +21,7 @@ ActiveRecord::Base.instance_eval do
   @@active_record_classes_list = []
 
   def inherited(subclass)
-    puts "registering an ActiveRecord model for later processing: #{subclass}"
+    puts "registering an ActiveRecord model for later processing: #{subclass}" if $DEBUG
     active_record_classes_list << "#{subclass}"
     inherited_without_log(subclass)
   end
@@ -79,7 +79,7 @@ module GetText
     # "ClassName|FieldName" uses GetText.sgettext. So you don't need to translate the left-side of "|". 
     # See <Documents for Translators for more details(http://www.yotabanana.com/hiki/ruby-gettext-translate.html)>.
     def init(config)
-      puts "\nconfig: #{config.inspect}\n\n"
+      puts "\nconfig: #{config.inspect}\n\n" if $DEBUG
       if config
 	config.each{|k, v|
 	  @config[k] = v
@@ -93,7 +93,7 @@ module GetText
     end
 
     def parse(file, targets = []) # :nodoc:
-      puts "parse file #{file}"
+      puts "parse file #{file}" if $DEBUG
       
       GetText.locale = "en"
       old_constants = Object.constants
@@ -109,7 +109,7 @@ module GetText
       loaded_constants.each do |classname|
 	klass = eval(classname, TOPLEVEL_BINDING)
 	if klass.is_a?(Class) && klass < ActiveRecord::Base
-          puts "processing class #{klass.name}"
+          puts "processing class #{klass.name}" if $DEBUG 
 	  unless (klass.untranslate_all? || klass.abstract_class?)
 	    add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
 	    unless klass.class_name == classname
