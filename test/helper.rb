@@ -35,3 +35,4 @@ puts "The activerecord svn version is #{$1}"
 class << ActiveRecord::Base
   public :with_scope, :with_exclusive_scope
 end
+
