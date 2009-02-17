@@ -2578,3 +2578,4 @@ class ValidatesNumericalityTest < ActiveRecord::TestCase
       end
     end
 end
+
