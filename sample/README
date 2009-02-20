@@ -2,7 +2,7 @@
 == USAGE
 (Install sqlite3 and sqlite3-ruby first)
 
-$ Edit config/database.yml as you like
+$ Edit config/database.yml if you need.
 $ rake createdb
 $ rake makemo
 $ ruby sample.rb
