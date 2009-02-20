@@ -1,6 +1,6 @@
 = Sample for gettext_activerecord
 == USAGE
-(Install mysql first)
+(Install sqlite3 and sqlite3-ruby first)
 
 $ Edit config/database.yml as you like
 $ rake createdb

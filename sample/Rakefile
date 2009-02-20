@@ -12,6 +12,7 @@ task :makemo do
   GetText.create_mofiles
 end
 
+desc "Update po files"
 task :updatepo do
   require 'gettext_activerecord/tools'
   # Read Database information from "config/database.yml"
@@ -19,14 +20,13 @@ task :updatepo do
                            "sample AR 1.0.0")
 end
 
-desc 'Build the MySQL test databases'
 task :createdb do
-  %x( mysqladmin -u root create sample )
-  %x( mysql -u root sample < db/create.sql )
+  require 'active_record'
+  config = YAML.load(IO.read("config/database.yml"))["development"]
+  ActiveRecord::Base.establish_connection(config)
+  require 'db/schema.rb'
 end
 
-desc 'Drop the MySQL test databases'
 task :dropdb do
-  %x( mysqladmin -u root -f drop sample )
+  rm "db/development.sqlite3"
 end
-
