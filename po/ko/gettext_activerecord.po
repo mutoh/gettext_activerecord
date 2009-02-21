@@ -40,84 +40,84 @@ msgid "Validation failed: %{error_messages}"
 msgstr "유효하지 않은 입력입니다: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn}은(는) 허용 가능한 목록에 포함되어 있지 않습니다"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute}은(는) 허용 가능한 목록에 포함되어 있지 않습니다"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn}은(는) 예약되어 있기 때문에 사용할 수 없습니다"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute}은(는) 예약되어 있기 때문에 사용할 수 없습니다"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn}은(는) 유효하지 않은 형식입니다"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute}은(는) 유효하지 않은 형식입니다"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "입력 확인을 위한 %{fn}이(가) 서로 일치하지 않습니다"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "입력 확인을 위한 %{attribute}이(가) 서로 일치하지 않습니다"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn}이(가) 비어 있습니다. 값을 입력해야 합니다"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute}이(가) 비어 있습니다. 값을 입력해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn}이(가) 비어 있습니다. 값을 입력해야 합니다"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute}이(가) 비어 있습니다. 값을 입력해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn}의 문자 수가 최대 허용 문자 수 %d자 보다 많습니다"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute}의 문자 수가 최대 허용 문자 수 %{count}자 보다 많습니다"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn}의 문자 수가 최소 허용 문자 수 %d자 보다 작습니다"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute}의 문자 수가 최소 허용 문자 수 %{count}자 보다 작습니다"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn}의 문자 수가 잘못되었습니다. %d 문자여야 합니다"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute}의 문자 수가 잘못되었습니다. %{count} 문자여야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "중복되는 값을 사용했습니다. 다른 %{fn}을(를) 사용해주십시요"
+msgid "%{attribute} has already been taken"
+msgstr "중복되는 값을 사용했습니다. 다른 %{attribute}을(를) 사용해주십시요"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn}은(는) 숫자가 아닙니다"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute}은(는) 숫자가 아닙니다"
 
 #: lib/gettext_activerecord/active_record.rb:230
 #, fuzzy
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:231
 #, fuzzy
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:232
 #, fuzzy
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:233
 #, fuzzy
-msgid "%{fn} must be less than %d"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:234
 #, fuzzy
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:235
 #, fuzzy
-msgid "%{fn} must be odd"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"
 
 #: lib/gettext_activerecord/active_record.rb:236
 #, fuzzy
-msgid "%{fn} must be even"
-msgstr "%{fn}은(는) 반드시 확인해야 합니다"
+msgid "%{attribute} must be even"
+msgstr "%{attribute}은(는) 반드시 확인해야 합니다"

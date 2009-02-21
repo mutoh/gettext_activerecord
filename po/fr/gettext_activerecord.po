@@ -42,77 +42,77 @@ msgid "Validation failed: %{error_messages}"
 msgstr "Validation échouée: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn} n'est pas dans la liste"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute} n'est pas dans la liste"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn} est réservé"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute} est réservé"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn} est invalide"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute} est invalide"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn} ne correspond pas à la confirmation"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute} ne correspond pas à la confirmation"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn} doit être accepté"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute} doit être accepté"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn} ne peut être vide"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute} ne peut être vide"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn} ne peut être vierge"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute} ne peut être vierge"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn} est trop long (max. %d caractères)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute} est trop long (max. %{count} caractères)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn} est trop court (min. %d caractères)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute} est trop court (min. %{count} caractères)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn} a une longueur incompatible (devrait être de %d caractères)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute} a une longueur incompatible (devrait être de %{count} caractères)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn} est déjà pris"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute} est déjà pris"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn} n'est pas un nombre"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute} n'est pas un nombre"
 
 #: lib/gettext_activerecord/active_record.rb:230
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn} doit être supérieur à %d"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute} doit être supérieur à %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:231
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn} doit être supérieur ou égal à %d"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute} doit être supérieur ou égal à %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:232
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn} doit être égal à %d"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute} doit être égal à %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:233
-msgid "%{fn} must be less than %d"
-msgstr "%{fn} doit être inférieur à %d"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute} doit être inférieur à %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:234
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn} doit être inférieur ou égal à %d"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute} doit être inférieur ou égal à %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:235
-msgid "%{fn} must be odd"
-msgstr "%{fn} doit être impair"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute} doit être impair"
 
 #: lib/gettext_activerecord/active_record.rb:236
-msgid "%{fn} must be even"
-msgstr "%{fn} doit être pair"
+msgid "%{attribute} must be even"
+msgstr "%{attribute} doit être pair"

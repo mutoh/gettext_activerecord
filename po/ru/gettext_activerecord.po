@@ -41,77 +41,77 @@ msgid "Validation failed: %{error_messages}"
 msgstr "Проверка правильности не пройдена: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn} не включёно в список"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute} не включёно в список"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn} зарезервировано"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute} зарезервировано"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn} недействительно"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute} недействительно"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn} не подтверждено"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute} не подтверждено"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn} должно быть принято"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute} должно быть принято"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn} не может быть пусто"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute} не может быть пусто"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn} не может быть пробелом"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute} не может быть пробелом"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn} слишком длинно (максимально возможно %d символов)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute} слишком длинно (максимально возможно %{count} символов)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn} слишком коротко (должно быть минимум %d символов)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute} слишком коротко (должно быть минимум %{count} символов)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn} неправильной длины (должно быть %d символов)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute} неправильной длины (должно быть %{count} символов)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn} уже было взято"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute} уже было взято"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "Ожидается число: %{fn}"
+msgid "%{attribute} is not a number"
+msgstr "Ожидается число: %{attribute}"
 
 #: lib/gettext_activerecord/active_record.rb:230
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn} должно быть больше %d"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute} должно быть больше %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:231
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn} должно быть больше или равно %d"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute} должно быть больше или равно %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:232
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn} должно быть равно %d"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute} должно быть равно %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:233
-msgid "%{fn} must be less than %d"
-msgstr "%{fn} должно быть меньше %d"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute} должно быть меньше %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:234
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn} должно быть меньше или равно %d"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute} должно быть меньше или равно %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:235
-msgid "%{fn} must be odd"
-msgstr "%{fn} должно быть нечётным"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute} должно быть нечётным"
 
 #: lib/gettext_activerecord/active_record.rb:236
-msgid "%{fn} must be even"
-msgstr "%{fn} должно быть чётным"
+msgid "%{attribute} must be even"
+msgstr "%{attribute} должно быть чётным"

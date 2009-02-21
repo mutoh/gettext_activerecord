@@ -85,25 +85,25 @@ module ActiveRecord #:nodoc:
       # To use other backends, gettext_activerecord doesn't use backend architecture.
       # You can use GetText with other backends.
       @@default_error_messages = {
-          :inclusion => N_("%{fn} is not included in the list"),
-          :exclusion => N_("%{fn} is reserved"),
-          :invalid => N_("%{fn} is invalid"),
-          :confirmation => N_("%{fn} doesn't match confirmation"),
-          :accepted  => N_("%{fn} must be accepted"),
-          :empty => N_("%{fn} can't be empty"),
-          :blank => N_("%{fn} can't be blank"),
-          :too_long => N_("%{fn} is too long (maximum is %d characters)"),  
-          :too_short => N_("%{fn} is too short (minimum is %d characters)"), 
-          :wrong_length => N_("%{fn} is the wrong length (should be %d characters)"),
-          :taken => N_("%{fn} has already been taken"),
-          :not_a_number => N_("%{fn} is not a number"),
-          :greater_than => N_("%{fn} must be greater than %d"),
-          :greater_than_or_equal_to => N_("%{fn} must be greater than or equal to %d"),
-          :equal_to => N_("%{fn} must be equal to %d"),
-          :less_than => N_("%{fn} must be less than %d"),
-          :less_than_or_equal_to => N_("%{fn} must be less than or equal to %d"),
-          :odd => N_("%{fn} must be odd"),
-          :even => N_("%{fn} must be even")
+          :inclusion => N_("%{attribute} is not included in the list"),
+          :exclusion => N_("%{attribute} is reserved"),
+          :invalid => N_("%{attribute} is invalid"),
+          :confirmation => N_("%{attribute} doesn't match confirmation"),
+          :accepted  => N_("%{attribute} must be accepted"),
+          :empty => N_("%{attribute} can't be empty"),
+          :blank => N_("%{attribute} can't be blank"),
+          :too_long => N_("%{attribute} is too long (maximum is %{count} characters)"),  
+          :too_short => N_("%{attribute} is too short (minimum is %{count} characters)"), 
+          :wrong_length => N_("%{attribute} is the wrong length (should be %{count} characters)"),
+          :taken => N_("%{attribute} has already been taken"),
+          :not_a_number => N_("%{attribute} is not a number"),
+          :greater_than => N_("%{attribute} must be greater than %{count}"),
+          :greater_than_or_equal_to => N_("%{attribute} must be greater than or equal to %{count}"),
+          :equal_to => N_("%{attribute} must be equal to %{count}"),
+          :less_than => N_("%{attribute} must be less than %{count}"),
+          :less_than_or_equal_to => N_("%{attribute} must be less than or equal to %{count}"),
+          :odd => N_("%{attribute} must be odd"),
+          :even => N_("%{attribute} must be even")
       }
     end
 

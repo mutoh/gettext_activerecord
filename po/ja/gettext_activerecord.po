@@ -40,77 +40,77 @@ msgid "Validation failed: %{error_messages}"
 msgstr "入力値が正しくありません。: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn}は一覧にありません。"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute}は一覧にありません。"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn}は予約されています。"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute}は予約されています。"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn}は不正な値です。"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute}は不正な値です。"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn}が一致しません。"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute}が一致しません。"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn}を受諾してください。"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute}を受諾してください。"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn}を入力してください。"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute}を入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn}を入力してください。"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute}を入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn}は%d文字以内で入力してください。"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute}は%{count}文字以内で入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn}は%d文字以上で入力してください。"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute}は%{count}文字以上で入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn}は%d文字で入力してください。"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute}は%{count}文字で入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn}はすでに存在します。"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute}はすでに存在します。"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn}は数値で入力してください。"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute}は数値で入力してください。"
 
 #: lib/gettext_activerecord/active_record.rb:230
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn}は%dより大きい値にしてください。"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute}は%{count}より大きい値にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:231
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn}は%d以上の値にしてください。"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute}は%{count}以上の値にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:232
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn}は%dにしてください。"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute}は%{count}にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:233
-msgid "%{fn} must be less than %d"
-msgstr "%{fn}は%dより小さい値にしてください。"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute}は%{count}より小さい値にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:234
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn}は%d以下の値にしてください。"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute}は%{count}以下の値にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:235
-msgid "%{fn} must be odd"
-msgstr "%{fn}は奇数にしてください。"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute}は奇数にしてください。"
 
 #: lib/gettext_activerecord/active_record.rb:236
-msgid "%{fn} must be even"
-msgstr "%{fn}は偶数にしてください。"
+msgid "%{attribute} must be even"
+msgstr "%{attribute}は偶数にしてください。"

@@ -40,77 +40,77 @@ msgid "Validation failed: %{error_messages}"
 msgstr "Kiểm chứng thất bại: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn} không có trong danh sách"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute} không có trong danh sách"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn} được dành riêng"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute} được dành riêng"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn} không hợp lệ"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute} không hợp lệ"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn} không khớp với xác nhận"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute} không khớp với xác nhận"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn} phải được chấp nhận"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute} phải được chấp nhận"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn} không được rỗng"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute} không được rỗng"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn} không được trống"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute} không được trống"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn} quá dài (tối đa là %d kí tự)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute} quá dài (tối đa là %{count} kí tự)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn} quá ngắn (tối thiểu là %d kí tự)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute} quá ngắn (tối thiểu là %{count} kí tự)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn} sai chiều dài (phải là %d kí tự)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute} sai chiều dài (phải là %{count} kí tự)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn} đã tồn tại"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute} đã tồn tại"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn} không phải là số"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute} không phải là số"
 
 #: lib/gettext_activerecord/active_record.rb:230
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn} phải lớn hơn %d"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute} phải lớn hơn %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:231
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn} phải lớn hơn hoặc bằng %d"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute} phải lớn hơn hoặc bằng %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:232
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn} phải bằng %d"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute} phải bằng %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:233
-msgid "%{fn} must be less than %d"
-msgstr "%{fn} phải nhỏ hơn %d"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute} phải nhỏ hơn %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:234
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn} phải nhỏ hơn hoặc bằng %d"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute} phải nhỏ hơn hoặc bằng %{count}"
 
 #: lib/gettext_activerecord/active_record.rb:235
-msgid "%{fn} must be odd"
-msgstr "%{fn} phải lẻ"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute} phải lẻ"
 
 #: lib/gettext_activerecord/active_record.rb:236
-msgid "%{fn} must be even"
-msgstr "%{fn} phải chẵn"
+msgid "%{attribute} must be even"
+msgstr "%{attribute} phải chẵn"

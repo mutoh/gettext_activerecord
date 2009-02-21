@@ -42,84 +42,84 @@ msgid "Validation failed: %{error_messages}"
 msgstr "Provjera nije uspjela: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn} nije u listi"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute} nije u listi"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn} je rezervisano"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute} je rezervisano"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn} je pogrešan"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute} je pogrešan"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn} se ne podudara sa potvrdom"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute} se ne podudara sa potvrdom"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn} ne može biti prazan"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute} ne može biti prazan"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn} ne može biti prazan"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute} ne može biti prazan"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn} je previše dugo (maksimum je %d karaktera)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute} je previše dugo (maksimum je %{count} karaktera)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn} nije dovoljno dugo (maksimum je %d karaktera)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute} nije dovoljno dugo (maksimum je %{count} karaktera)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn} je pogrešne dužine (trebalo bi biti %d karaktera)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute} je pogrešne dužine (trebalo bi biti %{count} karaktera)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn} se već koristi"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute} se već koristi"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn} nije broj"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute} nije broj"
 
 #: lib/gettext_activerecord/active_record.rb:230
 #, fuzzy
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:231
 #, fuzzy
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:232
 #, fuzzy
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:233
 #, fuzzy
-msgid "%{fn} must be less than %d"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:234
 #, fuzzy
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:235
 #, fuzzy
-msgid "%{fn} must be odd"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute} se mora prihvatiti"
 
 #: lib/gettext_activerecord/active_record.rb:236
 #, fuzzy
-msgid "%{fn} must be even"
-msgstr "%{fn} se mora prihvatiti"
+msgid "%{attribute} must be even"
+msgstr "%{attribute} se mora prihvatiti"

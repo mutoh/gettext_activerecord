@@ -40,84 +40,84 @@ msgid "Validation failed: %{error_messages}"
 msgstr "Validatie mislukt: %{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn} komt niet voor in de lijst"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute} komt niet voor in de lijst"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn} is gereserveerd"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute} is gereserveerd"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn} is ongeldig"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute} is ongeldig"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn} komt niet overeen met de bevestiging"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute} komt niet overeen met de bevestiging"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn} mag niet leeg zijn"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute} mag niet leeg zijn"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn} mag niet leeg zijn"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute} mag niet leeg zijn"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn} is te lang (maximum is %d tekens)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute} is te lang (maximum is %{count} tekens)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn} is te kort (minimum is %d tekens)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute} is te kort (minimum is %{count} tekens)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn} heeft een onjuiste lengte (dit moet %d tekens zijn)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute} heeft een onjuiste lengte (dit moet %{count} tekens zijn)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn} is al in gebruik"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute} is al in gebruik"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn} is geen getal"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute} is geen getal"
 
 #: lib/gettext_activerecord/active_record.rb:230
 #, fuzzy
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:231
 #, fuzzy
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:232
 #, fuzzy
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:233
 #, fuzzy
-msgid "%{fn} must be less than %d"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:234
 #, fuzzy
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:235
 #, fuzzy
-msgid "%{fn} must be odd"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute} moet geaccepteerd worden"
 
 #: lib/gettext_activerecord/active_record.rb:236
 #, fuzzy
-msgid "%{fn} must be even"
-msgstr "%{fn} moet geaccepteerd worden"
+msgid "%{attribute} must be even"
+msgstr "%{attribute} moet geaccepteerd worden"

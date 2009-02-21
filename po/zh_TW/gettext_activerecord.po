@@ -43,77 +43,77 @@ msgid "Validation failed: %{error_messages}"
 msgstr "校驗失敗：%{error_messages}"
 
 #: lib/gettext_activerecord/active_record.rb:218
-msgid "%{fn} is not included in the list"
-msgstr "%{fn}沒有包含在列表中"
+msgid "%{attribute} is not included in the list"
+msgstr "%{attribute}沒有包含在列表中"
 
 #: lib/gettext_activerecord/active_record.rb:219
-msgid "%{fn} is reserved"
-msgstr "%{fn}被保留"
+msgid "%{attribute} is reserved"
+msgstr "%{attribute}被保留"
 
 #: lib/gettext_activerecord/active_record.rb:220
-msgid "%{fn} is invalid"
-msgstr "%{fn}是無效"
+msgid "%{attribute} is invalid"
+msgstr "%{attribute}是無效"
 
 #: lib/gettext_activerecord/active_record.rb:221
-msgid "%{fn} doesn't match confirmation"
-msgstr "%{fn}不符和確認標準"
+msgid "%{attribute} doesn't match confirmation"
+msgstr "%{attribute}不符和確認標準"
 
 #: lib/gettext_activerecord/active_record.rb:222
-msgid "%{fn} must be accepted"
-msgstr "%{fn}必須接受"
+msgid "%{attribute} must be accepted"
+msgstr "%{attribute}必須接受"
 
 #: lib/gettext_activerecord/active_record.rb:223
-msgid "%{fn} can't be empty"
-msgstr "%{fn}不能是空白"
+msgid "%{attribute} can't be empty"
+msgstr "%{attribute}不能是空白"
 
 #: lib/gettext_activerecord/active_record.rb:224
-msgid "%{fn} can't be blank"
-msgstr "%{fn}不能是空白"
+msgid "%{attribute} can't be blank"
+msgstr "%{attribute}不能是空白"
 
 #: lib/gettext_activerecord/active_record.rb:225
-msgid "%{fn} is too long (maximum is %d characters)"
-msgstr "%{fn}太長 (最長是%d个字)"
+msgid "%{attribute} is too long (maximum is %{count} characters)"
+msgstr "%{attribute}太長 (最長是%{count}个字)"
 
 #: lib/gettext_activerecord/active_record.rb:226
-msgid "%{fn} is too short (minimum is %d characters)"
-msgstr "%{fn}太短 (最短是%d个字)"
+msgid "%{attribute} is too short (minimum is %{count} characters)"
+msgstr "%{attribute}太短 (最短是%{count}个字)"
 
 #: lib/gettext_activerecord/active_record.rb:227
-msgid "%{fn} is the wrong length (should be %d characters)"
-msgstr "%{fn}字數錯誤 (應該是%d個字)"
+msgid "%{attribute} is the wrong length (should be %{count} characters)"
+msgstr "%{attribute}字數錯誤 (應該是%{count}個字)"
 
 #: lib/gettext_activerecord/active_record.rb:228
-msgid "%{fn} has already been taken"
-msgstr "%{fn}已被使用"
+msgid "%{attribute} has already been taken"
+msgstr "%{attribute}已被使用"
 
 #: lib/gettext_activerecord/active_record.rb:229
-msgid "%{fn} is not a number"
-msgstr "%{fn}不是數字"
+msgid "%{attribute} is not a number"
+msgstr "%{attribute}不是數字"
 
 #: lib/gettext_activerecord/active_record.rb:230
-msgid "%{fn} must be greater than %d"
-msgstr "%{fn}必須大於"
+msgid "%{attribute} must be greater than %{count}"
+msgstr "%{attribute}必須大於"
 
 #: lib/gettext_activerecord/active_record.rb:231
-msgid "%{fn} must be greater than or equal to %d"
-msgstr "%{fn}必須大於等於"
+msgid "%{attribute} must be greater than or equal to %{count}"
+msgstr "%{attribute}必須大於等於"
 
 #: lib/gettext_activerecord/active_record.rb:232
-msgid "%{fn} must be equal to %d"
-msgstr "%{fn}必須等於"
+msgid "%{attribute} must be equal to %{count}"
+msgstr "%{attribute}必須等於"
 
 #: lib/gettext_activerecord/active_record.rb:233
-msgid "%{fn} must be less than %d"
-msgstr "%{fn}必須小於"
+msgid "%{attribute} must be less than %{count}"
+msgstr "%{attribute}必須小於"
 
 #: lib/gettext_activerecord/active_record.rb:234
-msgid "%{fn} must be less than or equal to %d"
-msgstr "%{fn}必須小於等於"
+msgid "%{attribute} must be less than or equal to %{count}"
+msgstr "%{attribute}必須小於等於"
 
 #: lib/gettext_activerecord/active_record.rb:235
-msgid "%{fn} must be odd"
-msgstr "%{fn}必須是奇数"
+msgid "%{attribute} must be odd"
+msgstr "%{attribute}必須是奇数"
 
 #: lib/gettext_activerecord/active_record.rb:236
-msgid "%{fn} must be even"
-msgstr "%{fn}必須是偶数"
+msgid "%{attribute} must be even"
+msgstr "%{attribute}必須是偶数"
