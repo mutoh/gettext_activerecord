@@ -10,7 +10,7 @@ desc "Create mo files"
 task :makemo do
   require 'activerecord'
   require 'gettext_activerecord/tools'
-  GetText.create_mofiles
+  GetText.create_mofiles(:mo_root => "locale")
 end
 
 SCHEMA_PATH = File.join(File.dirname(__FILE__), "db")

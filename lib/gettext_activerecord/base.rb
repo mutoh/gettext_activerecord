@@ -47,19 +47,19 @@ module ActiveRecord #:nodoc:
         [@@gettext_untranslate[self], @@gettext_untranslate_columns[self] || []]
       end
 
-      def columns_with_gettext
+      def columns_with_gettext_activerecord
         unless defined? @columns
           @columns = nil 
         end
         unless @columns
-          @columns = columns_without_gettext
+          @columns = columns_without_gettext_activerecord
           @columns.each {|column| 
             column.table_class = self
           }
         end
         @columns
       end
-      alias_method_chain :columns, :gettext
+      alias_method_chain :columns, :gettext_activerecord
     end
   end
 

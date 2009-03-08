@@ -15,14 +15,14 @@ module ActiveRecord #:nodoc:
       attr_accessor :table_class
       alias :human_name_witout_localized :human_name 
 
-      def human_name_with_gettext
+      def human_name_with_gettext_activerecord
         if table_class
           table_class.human_attribute_name(@name)
         else
           @name.humanize
         end
       end
-      alias_method_chain :human_name, :gettext
+      alias_method_chain :human_name, :gettext_activerecord
     end
   end
 end
