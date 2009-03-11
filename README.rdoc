@@ -85,7 +85,7 @@ using Ruby-GetText-Package.
   $ ruby sample.rb
 
 === with Rails
-((* notyet*))
+See gettext_rails [http://github.com/mutoh/gettext_rails/tree/master]
 
 == License
 This program is licenced under the same licence as Ruby.
