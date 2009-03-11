@@ -7,5 +7,5 @@
   license terms as Ruby.
 =end
 module GetTextActiveRecord
-  VERSION = "0.1.0"
+  VERSION = "2.3.0"
 end
