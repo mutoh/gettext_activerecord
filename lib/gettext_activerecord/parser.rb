@@ -45,6 +45,7 @@ module GetText
       :db_yml => "config/database.yml",
       :db_mode => "development",
       :activerecord_classes => ["ActiveRecord::Base"],
+      :untranslate_classes => ["ActiveRecord::Base", "ActiveRecord::SessionStore::Session"],
       :untranslate_columns => ["id"],
       :use_classname => true,
     }
@@ -54,9 +55,9 @@ module GetText
     module_function
     def require_rails(file) # :nodoc:
       begin
-	require file
+        require file
       rescue MissingSourceFile
-	$stderr.puts _("'%{file}' is not found.") % {:file => file}
+        $stderr.puts _("'%{file}' is not found.") % {:file => file}
       end
     end
 
@@ -67,6 +68,7 @@ module GetText
     #   * :db_yml - the path of database.yml. Default is "config/database.yml".
     #   * :db_mode - the mode of the database. Default is "development"
     #   * :activerecord_classes - an Array of the superclass of the models. The classes should be String value. Default is ["ActiveRecord::Base"]
+    #   * :untranslate_classes - an Array of the modules/class names which is ignored as the msgid.
     #   * :untranslate_columns - an Array of the column names which is ignored as the msgid.
     #   * :adapter - the options for ActiveRecord::Base.establish_connection. If this value is set, :db_yml option is ignored.
     #   * :host - ditto
@@ -81,15 +83,27 @@ module GetText
     def init(config)
       puts "\nconfig: #{config.inspect}\n\n" if $DEBUG
       if config
-	config.each{|k, v|
-	  @config[k] = v
-	}
+        config.each{|k, v|
+          @config[k] = v
+        }
       end
       @ar_re = /class.*(#{@config[:activerecord_classes].join("|")})/
     end
 
-    def untranslate_column?(klass, columnname)
-      klass.untranslate?(columnname) || @config[:untranslate_columns].include?(columnname)
+    def translatable_class?(klass)
+      if klass.is_a?(Class) && klass < ActiveRecord::Base
+        if klass.untranslate_all? || klass.abstract_class? || @config[:untranslate_classes].include?(klass.name)
+          false
+        else
+          true
+        end
+      else
+        true
+      end
+    end
+
+    def translatable_column?(klass, columnname)
+      ! (klass.untranslate?(columnname) || @config[:untranslate_columns].include?(columnname))
     end
 
     def parse(file, targets = []) # :nodoc:
@@ -107,34 +121,32 @@ module GetText
       loaded_constants = ActiveRecord::Base.active_record_classes_list
       ActiveRecord::Base.reset_active_record_classes_list
       loaded_constants.each do |classname|
-	klass = eval(classname, TOPLEVEL_BINDING)
-	if klass.is_a?(Class) && klass < ActiveRecord::Base
+        klass = eval(classname, TOPLEVEL_BINDING)
+        if translatable_class?(klass)
           puts "processing class #{klass.name}" if $DEBUG 
-	  unless (klass.untranslate_all? || klass.abstract_class?)
-	    add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
-	    unless klass.class_name == classname
-	      add_target(targets, file, ActiveSupport::Inflector.singularize(classname.gsub(/_/, " ").downcase))
-	    end
-	    begin
-	      klass.columns.each do |column|
-		unless untranslate_column?(klass, column.name)
-		  if @config[:use_classname]
-		    msgid = classname + "|" +  klass.human_attribute_name(column.name)
-		  else
-		    msgid = klass.human_attribute_name(column.name)
-		  end
-		  add_target(targets, file, msgid)
-		end
-	      end
-	    rescue
-	      $stderr.puts _("No database is available.")
-	      $stderr.puts $!
-	    end
-	  end
-	end
+          add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
+          unless klass.class_name == classname
+            add_target(targets, file, ActiveSupport::Inflector.singularize(classname.gsub(/_/, " ").downcase))
+          end
+          begin
+            klass.columns.each do |column|
+              if translatable_column?(klass, column.name)
+                if @config[:use_classname]
+                  msgid = classname + "|" +  klass.human_attribute_name(column.name)
+                  else
+                  msgid = klass.human_attribute_name(column.name)
+                end
+                add_target(targets, file, msgid)
+              end
+            end
+          rescue
+            $stderr.puts _("No database is available.")
+            $stderr.puts $!
+          end
+        end
       end
       if RubyParser.target?(file)
-	targets = RubyParser.parse(file, targets)
+        targets = RubyParser.parse(file, targets)
       end
       targets.uniq!
       targets
@@ -145,10 +157,10 @@ module GetText
       key_existed = targets.assoc(msgid)
       if key_existed 
         unless targets[targets.index(key_existed)].include?(file_lineno)
-	  targets[targets.index(key_existed)] = key_existed << file_lineno
-	end
+          targets[targets.index(key_existed)] = key_existed << file_lineno
+        end
       else
-	targets << [msgid, "#{file}:-"]
+        targets << [msgid, "#{file}:-"]
       end
       targets
     end
@@ -157,27 +169,27 @@ module GetText
       init(nil) unless @ar_re
       data = IO.readlines(file)
       data.each do |v|
-	if @ar_re =~ v
-	  unless ActiveRecord::Base.connected?
-	    begin
-	      require 'rubygems'
-	    rescue LoadError
-	      $stderr.puts _("rubygems are not found.") if $DEBUG
-	    end
-	    begin
-	      ENV["RAILS_ENV"] = @config[:db_mode]
-	      require 'config/boot.rb'
-	      require 'config/environment.rb'
-	      require_rails 'activesupport'
-	      require_rails 'gettext_activerecord'
-	    rescue LoadError
-	      require_rails 'rubygems'
+        if @ar_re =~ v
+          unless ActiveRecord::Base.connected?
+            begin
+              require 'rubygems'
+            rescue LoadError
+              $stderr.puts _("rubygems are not found.") if $DEBUG
+            end
+            begin
+              ENV["RAILS_ENV"] = @config[:db_mode]
+              require 'config/boot.rb'
+              require 'config/environment.rb'
+              require_rails 'activesupport'
+              require_rails 'gettext_activerecord'
+            rescue LoadError
+              require_rails 'rubygems'
               gem 'activerecord'
-	      require_rails 'activesupport'
-	      require_rails 'active_record'
-	      require_rails 'activesupport'
-	      require_rails 'gettext_activerecord'
-	    end
+              require_rails 'activesupport'
+              require_rails 'active_record'
+              require_rails 'activesupport'
+              require_rails 'gettext_activerecord'
+            end
             begin
               yaml = YAML.load(IO.read(@config[:db_yml]))
               if yaml[@config[:db_mode]]
@@ -186,19 +198,19 @@ module GetText
                 ActiveRecord::Base.establish_connection(yaml)
               end
             rescue
-  	      if @config[:adapter]
-	        ActiveRecord::Base.establish_connection(@config)
-	      else
+              if @config[:adapter]
+                ActiveRecord::Base.establish_connection(@config)
+              else
                 return false
               end
             end
-	  end
-	  return true
-	end
+          end
+          return true
+        end
       end
       false
     end
   end
- 
+  
   RGetText.add_parser(GetText::ActiveRecordParser)
 end
