@@ -52,16 +52,10 @@ class MyModel
     def human_attribute_name(name)
        name
     end
-    def self_and_descendents_from_active_record#nodoc:
-      klass = self
-      classes = [klass]
-      while klass != klass.base_class  
-        classes << klass = klass.superclass
-      end
-      classes
-    rescue
-      [self]
-    end
+  end
+
+  def self.self_and_descendants_from_active_record
+    [self]
   end
 
   include ActiveRecord::Validations

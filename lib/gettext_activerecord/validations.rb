@@ -73,10 +73,11 @@ module ActiveRecord #:nodoc:
   class Errors #:nodoc:
     include GetText
 
-    bindtextdomain "gettext_activerecord"
+    textdomain "gettext_activerecord"
 
     class << self
       include GetText
+
       def default_error_messages_with_gettext_activerecord
         @@default_error_messages || {}
       end
@@ -139,7 +140,7 @@ module ActiveRecord #:nodoc:
       errors.each_key do |attr|
         errors[attr].each do |msg|
    	  next if msg.nil?
-	  full_messages << msg
+          full_messages << msg
         end
       end
       full_messages
@@ -157,7 +158,6 @@ module ActiveRecord #:nodoc:
         end
         attr, count, value = obj[:attribute], obj[:count], obj[:value]
       end
-
       msgstr = @base.gettext(msgid)
       msgstr = _(msgid) if msgstr == msgid 
       msgstr = msgstr.gsub("%{fn}", "%{attribute}").gsub("%d", "%{count}").gsub("%{val}", "%{value}")  # for backward compatibility.
