@@ -22,7 +22,7 @@ ActiveRecord::Base.instance_eval do
 
   def inherited(subclass)
     puts "registering an ActiveRecord model for later processing: #{subclass}" if $DEBUG
-    active_record_classes_list << "#{subclass}"
+    active_record_classes_list << "#{subclass}" unless subclass.name.empty?
     inherited_without_log(subclass)
   end
 
