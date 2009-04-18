@@ -1,6 +1,6 @@
 = gettext_activerecord-2.0.1 (2009-04-18)
 
-  * parser.rb: skip anonymous classes 
+  * parser.rb: skip anonymous classes by TieTew.
 
 = gettext_activerecord-2.0.0 (2009-03-22)
 
