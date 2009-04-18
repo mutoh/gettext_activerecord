@@ -1,3 +1,8 @@
-2009-02-05  Masao Mutoh   <mutoh@highway.ne.jp>
-	* Separate from Ruby-GetText-Pacakge.
+= gettext_activerecord-2.0.1 (2009-04-18)
 
+  * parser.rb: skip anonymous classes 
+
+= gettext_activerecord-2.0.0 (2009-03-22)
+
+  * Separated from Ruby-GetText-Package-1.93.0.
+  * Support activerecord-2.3.2.

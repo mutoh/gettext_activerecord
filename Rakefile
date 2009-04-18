@@ -64,6 +64,8 @@ spec = Gem::Specification.new do |s|
   s.rubyforge_project = "gettext"
   s.files = FileList['**/*'].to_a.select{|v| v !~ /pkg|git/}
   s.require_path = 'lib'
+  s.add_dependency('gettext', '>= 2.0.0')
+  s.add_dependency('activerecord', '>= 2.3.2')
   s.has_rdoc = true
   s.description = 'Localization support for ActiveRecord by Ruby-GetText-Package.'
 end
@@ -89,7 +91,7 @@ Rake::RDocTask.new { |rdoc|
   rdoc.rdoc_dir = 'doc'
   rdoc.title    = "gettext_activerecord API Reference"
   rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README', 'ChangeLog')
+  rdoc.rdoc_files.include('README.rdoc', 'ChangeLog')
   rdoc.rdoc_files.include('lib/**/*.rb')
   rdoc.template = allison if allison.size > 0
 }
@@ -99,10 +101,10 @@ task :release => [ :package ] do
   require 'rubyforge'
 
   rubyforge = RubyForge.new
+  rubyforge.configure
   rubyforge.login
-  rubyforge.add_release("gettext_activerecord", "gettext_activerecord", 
-                        "gettext_activerecord #{PKG_VERSION}", 
+  rubyforge.add_release("gettext", "gettext_activerecord", 
+                        PKG_VERSION, 
                         "pkg/gettext_activerecord-#{PKG_VERSION}.gem",
                         "pkg/gettext_activerecord-#{PKG_VERSION}.tar.gz")
 end
-
