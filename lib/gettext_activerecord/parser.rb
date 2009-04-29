@@ -130,7 +130,7 @@ module GetText
             klass.columns.each do |column|
               if translatable_column?(klass, column.name)
                 if @config[:use_classname]
-                  msgid = classname + "|" +  klass.human_attribute_name(column.name)
+                  msgid = klass.class_name + "|" +  klass.human_attribute_name(column.name)
                   else
                   msgid = klass.human_attribute_name(column.name)
                 end
