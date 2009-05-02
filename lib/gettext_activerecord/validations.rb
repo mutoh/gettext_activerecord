@@ -156,7 +156,9 @@ module ActiveRecord #:nodoc:
           symbol = obj[:default][0].to_s.split(".").last.to_sym
           msgid = @@default_error_messages[symbol]
         end
-        attr, count, value = obj[:attribute], obj[:count], obj[:value]
+        #attr, count, value = obj[:attribute], obj[:count], obj[:value]
+        count, value = obj[:count], obj[:value]
+        attr = obj[:attribute] if obj[:attribute]
       end
       msgstr = @base.gettext(msgid)
       msgstr = _(msgid) if msgstr == msgid 
