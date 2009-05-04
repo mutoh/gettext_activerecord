@@ -19,6 +19,10 @@ module ActiveRecord #:nodoc:
 
     class << self
       # Untranslate all of the tablename/fieldnames in this model class.
+      #  (e.g.)
+      #  Person < ActiveRecord::Base
+      #    untranslate_all
+      #  end
       def untranslate_all
         @@gettext_untranslate[self] = true
       end
@@ -29,7 +33,10 @@ module ActiveRecord #:nodoc:
       end
 
       # Sets the untranslate columns.
-      # (e.g.) untranslate :foo, :bar, :baz
+      #  (e.g.) 
+      #  Person < ActiveRecord::Base
+      #    untranslate :age, :address
+      #  end
       def untranslate(*w)
         ary = @@gettext_untranslate_columns[self] || []
         ary += w.collect{|v| v.to_s}
@@ -37,7 +44,7 @@ module ActiveRecord #:nodoc:
       end
       
       # Returns true if the column is set "untranslate".
-      # (e.g.) untranslate? :foo
+      #  (e.g.) untranslate? :foo
       def untranslate?(columnname)
         ary = @@gettext_untranslate_columns[self] || []
         ary.include?(columnname)
