@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-unless RUBY_VERSION > "1.9.0"
+unless RUBY_VERSION >= "1.9.0"
   $KCODE = "UTF8"
 end
 $LOAD_PATH.unshift "."
