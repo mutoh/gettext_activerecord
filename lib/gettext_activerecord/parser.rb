@@ -18,8 +18,6 @@ include GetText
 ActiveRecord::Base.instance_eval do
   alias inherited_without_log inherited
 
-  @@active_record_classes_list = []
-
   def inherited(subclass)
     puts "registering an ActiveRecord model for later processing: #{subclass}" if $DEBUG
     active_record_classes_list << "#{subclass}" unless subclass.name.empty?
@@ -27,11 +25,11 @@ ActiveRecord::Base.instance_eval do
   end
 
   def active_record_classes_list
-    @@active_record_classes_list
+    $active_record_classes_list ||= []
   end
 
   def reset_active_record_classes_list
-    @@active_record_classes_list = []
+    $active_record_classes_list = []
   end
 end
 
@@ -187,7 +185,6 @@ module GetText
               gem 'activerecord'
               require_rails 'activesupport'
               require_rails 'active_record'
-              require_rails 'activesupport'
               require_rails 'gettext_activerecord'
             end
             begin
