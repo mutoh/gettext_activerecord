@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'helper'
 
 require 'models/topic'
@@ -108,11 +109,11 @@ class ValidationsTest < ActiveRecord::TestCase
     assert !r.save
 
     assert r.errors.invalid?("title"), "A reply without title should mark that attribute as invalid"
-    assert_equal "Replyタイトル 空です。", r.errors.full_messages[0]
+    assert_equal ["Replyタイトル 空です。", "Reply内容 空です。"].sort, r.errors.full_messages.sort
     assert_equal "空です。", r.errors.on("title")
 
     assert r.errors.invalid?("content"), "A reply without content should mark that attribute as invalid"
-    assert_equal "Reply内容 空です。", r.errors.full_messages[1]
+    assert_equal ["Replyタイトル 空です。", "Reply内容 空です。"].sort, r.errors.full_messages.sort
     assert_equal "空です。", r.errors.on("content")
 
     assert_equal 2, r.errors.count
@@ -122,11 +123,11 @@ class ValidationsTest < ActiveRecord::TestCase
     assert !r.save
 
     assert r.errors.invalid?("title"), "A reply without title should mark that attribute as invalid"
-    assert_equal "Title Empty", r.errors.full_messages[0]
+    assert_equal ["Content Empty", "Title Empty"], r.errors.full_messages.sort
     assert_equal "Empty", r.errors.on("title"), "A reply without title should contain an error"
 
     assert r.errors.invalid?("content"), "A reply without content should mark that attribute as invalid"
-    assert_equal "Content Empty", r.errors.full_messages[1]
+    assert_equal ["Content Empty", "Title Empty"], r.errors.full_messages.sort
     assert_equal "Empty", r.errors.on("content"), "A reply without content should contain an error"
 
     assert_equal 2, r.errors.count
@@ -138,7 +139,7 @@ class ValidationsTest < ActiveRecord::TestCase
     r.title = "Wrong Create"
     assert !r.save
     assert r.errors.invalid?("title"), "A reply with a bad title should mark that attribute as invalid"
-    assert_equal "Replyタイトル が不正に生成されました。", r.errors.full_messages[0]
+    assert_equal ["Replyタイトル が不正に生成されました。", "Reply内容 空です。"], r.errors.full_messages.sort
     assert_equal "が不正に生成されました。", r.errors.on("title")
 
     GetText.set_locale "en"
@@ -146,7 +147,7 @@ class ValidationsTest < ActiveRecord::TestCase
     r.title = "Wrong Create"
     assert !r.save
     assert r.errors.invalid?("title"), "A reply with a bad title should mark that attribute as invalid"
-    assert_equal "Title is Wrong Create", r.errors.full_messages[0]
+    assert_equal ["Content Empty", "Title is Wrong Create"], r.errors.full_messages.sort
     assert_equal "is Wrong Create", r.errors.on("title")
   end
 
@@ -188,7 +189,7 @@ class ValidationsTest < ActiveRecord::TestCase
       flunk
     rescue ActiveRecord::RecordInvalid => invalid
       assert_equal r, invalid.record
-      assert_equal "入力値が正しくありません。: Replyタイトル 空です。, Reply内容 空です。", invalid.message
+      assert ["入力値が正しくありません。: Replyタイトル 空です。, Reply内容 空です。", "入力値が正しくありません。: Reply内容 空です。, Replyタイトル 空です。"].include? invalid.message
     end
 
     GetText.set_locale "en"
@@ -198,7 +199,7 @@ class ValidationsTest < ActiveRecord::TestCase
       flunk
     rescue ActiveRecord::RecordInvalid => invalid
       assert_equal r, invalid.record
-      assert_equal "Validation failed: Title Empty, Content Empty", invalid.message
+      assert ["Validation failed: Title Empty, Content Empty", "Validation failed: Content Empty, Title Empty"].include? invalid.message
     end
   end
 
@@ -283,7 +284,7 @@ class ValidationsTest < ActiveRecord::TestCase
       begin
         Reply.create!
       rescue ActiveRecord::RecordInvalid => invalid
-        assert_equal "入力値が正しくありません。: Replyタイトル 空です。, Reply内容 空です。", invalid.message
+        assert ["入力値が正しくありません。: Replyタイトル 空です。, Reply内容 空です。", "入力値が正しくありません。: Reply内容 空です。, Replyタイトル 空です。"].include? invalid.message
       end
     end
 
@@ -292,7 +293,7 @@ class ValidationsTest < ActiveRecord::TestCase
       begin
         Reply.create!
       rescue ActiveRecord::RecordInvalid => invalid
-        assert_equal "Validation failed: Title Empty, Content Empty", invalid.message
+        assert ["Validation failed: Title Empty, Content Empty", "Validation failed: Content Empty, Title Empty"].include? invalid.message
       end
     end
   end
@@ -2360,42 +2361,31 @@ class ValidationsTest < ActiveRecord::TestCase
     GetText.set_locale "ja_JP.UTF-8"
     t = Topic.create
     assert !t.save
-    assert_equal "タイトルを入力してください。", t.errors.full_messages[0]
-    assert_equal "内容を入力してください。", t.errors.full_messages[1]
+    assert_equal ["タイトルを入力してください。", "内容を入力してください。"].sort, t.errors.full_messages.sort
     assert_equal "タイトルを入力してください。", t.errors.on(:title)
     assert_equal "内容を入力してください。", t.errors.on(:content)
 
     t = Reply.create
     assert !t.save
-    assert_equal "Replyタイトルを入力してください。", t.errors.full_messages[0]
-    assert_equal "Replyタイトル 空です。", t.errors.full_messages[1]
-    assert_equal "Reply内容を入力してください。", t.errors.full_messages[2]
-    assert_equal "Reply内容 空です。", t.errors.full_messages[3]
+    assert_equal ["Replyタイトルを入力してください。", "Replyタイトル 空です。", "Reply内容を入力してください。", "Reply内容 空です。"].sort, t.errors.full_messages.sort
     assert_equal ["Replyタイトルを入力してください。","空です。"], t.errors.on(:title)
     assert_equal ["Reply内容を入力してください。", "空です。"], t.errors.on(:content)
 
     t = Reply.create
     t.title = "Wrong Create"
     assert !t.save
-    assert_equal "Replyタイトル が不正に生成されました。", t.errors.full_messages[0]
-    assert_equal "Reply内容を入力してください。", t.errors.full_messages[1]
-    assert_equal "Reply内容 空です。", t.errors.full_messages[2]
+    assert_equal ["Replyタイトル が不正に生成されました。", "Reply内容を入力してください。", "Reply内容 空です。"].sort, t.errors.full_messages.sort
 
     t = SillyReply.create
     assert !t.save
-    assert_equal "Sillyタイトルを入力してください。", t.errors.full_messages[0]
-    assert_equal "Sillyタイトル 空です。", t.errors.full_messages[1]
-    assert_equal "Silly内容を入力してください。", t.errors.full_messages[2]
-    assert_equal "Silly内容 空です。", t.errors.full_messages[3]
+    assert_equal ["Sillyタイトルを入力してください。", "Sillyタイトル 空です。", "Silly内容を入力してください。", "Silly内容 空です。"].sort, t.errors.full_messages.sort
     assert_equal ["Sillyタイトルを入力してください。","空です。"], t.errors.on(:title)
     assert_equal ["Silly内容を入力してください。","空です。"], t.errors.on(:content)
 
     t = SillyReply.create
     t.title = "Wrong Create"
     assert !t.save
-    assert_equal "Sillyタイトル が不正に生成されました。", t.errors.full_messages[0]
-    assert_equal "Silly内容を入力してください。", t.errors.full_messages[1]
-    assert_equal "Silly内容 空です。", t.errors.full_messages[2]
+    assert_equal ["Sillyタイトル が不正に生成されました。", "Silly内容を入力してください。", "Silly内容 空です。"].sort, t.errors.full_messages.sort
   end
 
   def test_original_model_with_validation
