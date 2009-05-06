@@ -1,3 +1,9 @@
+= gettext_activerecord-2.0.2 (2009-05-07)
+
+  * Update version.
+  * Update Dutch translation [by Bart ten Brinke]
+  * Enhance ruby-1.9.1 support.
+
 = gettext_activerecord-2.0.1 (2009-04-18)
 
   * parser.rb: skip anonymous classes by TieTew.
