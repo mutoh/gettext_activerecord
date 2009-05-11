@@ -1,7 +1,9 @@
 $LOAD_PATH.unshift "../lib"
 require 'rubygems'
 
+locale_path = File.join(ENV["LOCALE_PATH"] || "../../locale/", "lib")
 gettext_path = File.join(ENV["GETTEXT_PATH"] || "../../gettext/", "lib")
+$LOAD_PATH.unshift locale_path
 $LOAD_PATH.unshift gettext_path
 
 task :default => :test
