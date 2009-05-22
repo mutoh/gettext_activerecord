@@ -108,3 +108,11 @@ task :release => [ :package ] do
                         "pkg/gettext_activerecord-#{PKG_VERSION}.gem",
                         "pkg/gettext_activerecord-#{PKG_VERSION}.tar.gz")
 end
+
+# Run the unit tests
+task :test do
+  cd "test"
+  Dir.glob("test_*.rb").each do |v|
+    ruby "-Ilib:../../locale/lib:../../gettext/lib #{v}"
+  end
+end
