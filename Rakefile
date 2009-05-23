@@ -97,7 +97,7 @@ Rake::RDocTask.new { |rdoc|
 }
 
 desc "Publish the release files to RubyForge."
-task :release => [ :package ] do
+task :release => [:makemo, :package ] do
   require 'rubyforge'
 
   rubyforge = RubyForge.new
@@ -115,4 +115,5 @@ task :test do
   Dir.glob("test_*.rb").each do |v|
     ruby "-Ilib:../../locale/lib:../../gettext/lib #{v}"
   end
+  cd ".."
 end
