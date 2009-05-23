@@ -33,7 +33,7 @@ module ActiveRecord #:nodoc:
           end
           class << self
             def human_attribute_name_with_gettext_activerecord(attribute_key_name) #:nodoc:
-              s_("#{self.class_name}|#{attribute_key_name.humanize}")
+              s_("#{self}|#{attribute_key_name.humanize}")
             end
             alias_method_chain :human_attribute_name, :gettext_activerecord
 
