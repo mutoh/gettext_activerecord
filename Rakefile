@@ -110,6 +110,7 @@ task :release => [:makemo, :package ] do
 end
 
 # Run the unit tests
+desc 'Run tests'
 task :test do
   cd "test"
   Dir.glob("test_*.rb").each do |v|
