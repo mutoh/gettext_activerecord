@@ -45,6 +45,7 @@ module GetText
       :activerecord_classes => ["ActiveRecord::Base"],
       :untranslate_classes => ["ActiveRecord::Base", "ActiveRecord::SessionStore::Session"],
       :untranslate_columns => ["id"],
+      :untranslate_table_name => false,
       :use_classname => true,
     }
 
@@ -68,6 +69,7 @@ module GetText
     #   * :activerecord_classes - an Array of the superclass of the models. The classes should be String value. Default is ["ActiveRecord::Base"]
     #   * :untranslate_classes - an Array of the modules/class names which is ignored as the msgid.
     #   * :untranslate_columns - an Array of the column names which is ignored as the msgid.
+    #   * :untranslate_table_name - a Boolean that avoids table name to be translated if it is true ... Generally, we don't have to translate table_name, do we? Maybe it is not true..... but it is a test
     #   * :adapter - the options for ActiveRecord::Base.establish_connection. If this value is set, :db_yml option is ignored.
     #   * :host - ditto
     #   * :username - ditto
@@ -122,15 +124,15 @@ module GetText
         klass = eval(classname, TOPLEVEL_BINDING)
         if translatable_class?(klass)
           puts "processing class #{klass.name}" if $DEBUG 
-          add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " ")))
+          add_target(targets, file, ActiveSupport::Inflector.singularize(klass.table_name.gsub(/_/, " "))) unless @config[:untranslate_table_name]
           unless klass.class_name == classname
-            add_target(targets, file, ActiveSupport::Inflector.singularize(classname.gsub(/_/, " ").downcase))
+            add_target(targets, file, ActiveSupport::Inflector.singularize(klass.to_s_with_gettext.gsub(/_/, " ").downcase))
           end
           begin
             klass.columns.each do |column|
               if translatable_column?(klass, column.name)
                 if @config[:use_classname]
-                  msgid = classname + "|" +  klass.human_attribute_name(column.name)
+                  msgid = klass.to_s_with_gettext + "|" +  klass.human_attribute_name(column.name)
                   else
                   msgid = klass.human_attribute_name(column.name)
                 end

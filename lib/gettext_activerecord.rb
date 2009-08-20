@@ -17,3 +17,8 @@ require 'gettext_activerecord/base'
 require 'gettext_activerecord/i18n'
 require 'gettext_activerecord/version'
 
+class Class
+  def to_s_with_gettext
+    to_s
+  end
+end
