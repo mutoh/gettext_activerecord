@@ -1,4 +1,9 @@
 # -*- encoding: utf-8 -*-
+require 'rake'
+
+Dir.chdir("test") do
+  Rake.application['makemo'].invoke
+end
 
 Gem::Specification.new do |s|
   s.name = %q{gettext_activerecord}
