@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require 'rake'
+#require 'rake'
 
 Dir.chdir("test") do
   Rake.application['makemo'].invoke
