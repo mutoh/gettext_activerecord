@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: active_record 1.0.0\n"
-"POT-Creation-Date: 2009-02-16 02:51+0900\n"
+"POT-Creation-Date: 2009-10-08 19:08+0200\n"
 "PO-Revision-Date: 2006-08-09 01:51+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,204 +16,200 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: fixtures/developer.rb:-
+#: models/developer.rb:-
 msgid "developer"
 msgstr ""
 
-#: fixtures/developer.rb:-
+#: models/developer.rb:-
 msgid "Developer|Name"
 msgstr ""
 
-#: fixtures/developer.rb:-
+#: models/developer.rb:-
 msgid "Developer|Salary"
 msgstr ""
 
-#: fixtures/developer.rb:-
+#: models/developer.rb:-
 msgid "Developer|Created at"
 msgstr ""
 
-#: fixtures/developer.rb:-
+#: models/developer.rb:-
 msgid "Developer|Updated at"
 msgstr ""
 
-#: fixtures/developer.rb:2
+#: models/developer.rb:2
 msgid "Developer|Non existent"
 msgstr ""
 
-#: fixtures/topic.rb:- fixtures/reply.rb:-
+#: models/topic.rb:- models/reply.rb:-
 msgid "topic"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Title"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Author name"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Author email address"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Written on"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Bonus time"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Last read"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Content"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Approved"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Replies count"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Parent"
 msgstr ""
 
-#: fixtures/topic.rb:-
+#: models/topic.rb:-
 msgid "Topic|Type"
 msgstr ""
 
-#: fixtures/topic.rb:35
+#: models/topic.rb:35
 msgid "Topic|Terms of service"
 msgstr ""
 
-#: fixtures/topic.rb:36 test_validations.rb:523
+#: models/topic.rb:36 test_validations.rb:503
 msgid "must be abided"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "reply"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Title"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Author name"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Author email address"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Written on"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Bonus time"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Last read"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Content"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Approved"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Replies count"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Parent"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "Reply|Type"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "sillyreply"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Title"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Author name"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Author email address"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Written on"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Bonus time"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Last read"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Content"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Approved"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Replies count"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Parent"
 msgstr ""
 
-#: fixtures/reply.rb:-
+#: models/reply.rb:-
 msgid "SillyReply|Type"
 msgstr ""
 
-#: fixtures/reply.rb:4
+#: models/reply.rb:4
 msgid "Reply|Topic"
 msgstr ""
 
-#: fixtures/reply.rb:16 fixtures/reply.rb:20
+#: models/reply.rb:16 models/reply.rb:20
 msgid "Empty"
 msgstr ""
 
-#: fixtures/reply.rb:25
+#: models/reply.rb:25
 msgid "is Content Mismatch"
 msgstr ""
 
-#: fixtures/reply.rb:30
+#: models/reply.rb:30
 msgid "is Wrong Create"
 msgstr ""
 
-#: fixtures/reply.rb:34
+#: models/reply.rb:34
 msgid "is Wrong Update"
-msgstr ""
-
-#: test_validations.rb:-
-msgid "course"
 msgstr ""
 
 #: test_validations.rb:-
@@ -233,6 +229,14 @@ msgid "IneptWizard|Type"
 msgstr ""
 
 #: test_validations.rb:-
+msgid "IneptWizard|Created at"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "IneptWizard|Updated at"
+msgstr ""
+
+#: test_validations.rb:-
 msgid "person"
 msgstr ""
 
@@ -246,6 +250,14 @@ msgstr ""
 
 #: test_validations.rb:-
 msgid "ProtectedPerson|Lock version"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "ProtectedPerson|Created at"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "ProtectedPerson|Updated at"
 msgstr ""
 
 #: test_validations.rb:-
@@ -265,6 +277,14 @@ msgid "Conjurer|Type"
 msgstr ""
 
 #: test_validations.rb:-
+msgid "Conjurer|Created at"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Conjurer|Updated at"
+msgstr ""
+
+#: test_validations.rb:-
 msgid "thaumaturgist"
 msgstr ""
 
@@ -280,109 +300,117 @@ msgstr ""
 msgid "Thaumaturgist|Type"
 msgstr ""
 
-#: test_validations.rb:409
+#: test_validations.rb:-
+msgid "Thaumaturgist|Created at"
+msgstr ""
+
+#: test_validations.rb:-
+msgid "Thaumaturgist|Updated at"
+msgstr ""
+
+#: test_validations.rb:389
 msgid "gotcha"
 msgstr ""
 
-#: test_validations.rb:501
+#: test_validations.rb:481
 msgid "%{fn} must be abided"
 msgstr ""
 
-#: test_validations.rb:719 test_validations.rb:773
+#: test_validations.rb:699 test_validations.rb:753
 msgid "%{fn} is bad data"
 msgstr ""
 
-#: test_validations.rb:740 test_validations.rb:825
+#: test_validations.rb:720 test_validations.rb:805
 msgid "is bad data"
 msgstr ""
 
-#: test_validations.rb:877
+#: test_validations.rb:857
 msgid "%{fn} can not be %{val}"
 msgstr ""
 
-#: test_validations.rb:891
+#: test_validations.rb:871
 msgid "can not be %{val}"
 msgstr ""
 
-#: test_validations.rb:939
+#: test_validations.rb:919
 msgid "%{fn} option %{val} is not in the list"
 msgstr ""
 
-#: test_validations.rb:961
+#: test_validations.rb:941
 msgid "option %{val} is not in the list"
 msgstr ""
 
-#: test_validations.rb:991
+#: test_validations.rb:971
 msgid "%{fn} option %{val} is restricted"
 msgstr ""
 
-#: test_validations.rb:1013
+#: test_validations.rb:993
 msgid "option %{val} is restricted"
 msgstr ""
 
-#: test_validations.rb:1129 test_validations.rb:1165
+#: test_validations.rb:1109 test_validations.rb:1145
 msgid "my string(%{fn}) is too short: %d"
 msgstr ""
 
-#: test_validations.rb:1129 test_validations.rb:1165
+#: test_validations.rb:1109 test_validations.rb:1145
 msgid "my string(%{fn}) is too long: %d"
 msgstr ""
 
-#: test_validations.rb:1147 test_validations.rb:1191
+#: test_validations.rb:1127 test_validations.rb:1171
 msgid "my string is too short: %d"
 msgstr ""
 
-#: test_validations.rb:1147 test_validations.rb:1191
+#: test_validations.rb:1127 test_validations.rb:1171
 msgid "my string is too long: %d"
 msgstr ""
 
-#: test_validations.rb:1250
+#: test_validations.rb:1230
 msgid "%{fn} %d dayo"
 msgstr ""
 
-#: test_validations.rb:1267
+#: test_validations.rb:1247
 msgid "%d dayo"
 msgstr ""
 
-#: test_validations.rb:1293 test_validations.rb:1327 test_validations.rb:1363
-#: test_validations.rb:1398 test_validations.rb:1434 test_validations.rb:2009
-#: test_validations.rb:2048 test_validations.rb:2111 test_validations.rb:2151
-#: test_validations.rb:2177 test_validations.rb:2235 test_validations.rb:2274
+#: test_validations.rb:1273 test_validations.rb:1307 test_validations.rb:1343
+#: test_validations.rb:1378 test_validations.rb:1414 test_validations.rb:1989
+#: test_validations.rb:2028 test_validations.rb:2091 test_validations.rb:2131
+#: test_validations.rb:2157 test_validations.rb:2215 test_validations.rb:2254
 msgid "%{fn} hoo %d"
 msgstr ""
 
-#: test_validations.rb:1310 test_validations.rb:1345 test_validations.rb:1381
-#: test_validations.rb:1416 test_validations.rb:1451 test_validations.rb:1468
-#: test_validations.rb:1485 test_validations.rb:2029 test_validations.rb:2067
-#: test_validations.rb:2092 test_validations.rb:2131 test_validations.rb:2197
-#: test_validations.rb:2217 test_validations.rb:2254 test_validations.rb:2294
+#: test_validations.rb:1290 test_validations.rb:1325 test_validations.rb:1361
+#: test_validations.rb:1396 test_validations.rb:1431 test_validations.rb:1448
+#: test_validations.rb:1465 test_validations.rb:2009 test_validations.rb:2047
+#: test_validations.rb:2072 test_validations.rb:2111 test_validations.rb:2177
+#: test_validations.rb:2197 test_validations.rb:2234 test_validations.rb:2274
 msgid "hoo %d"
 msgstr ""
 
-#: test_validations.rb:1525
+#: test_validations.rb:1505
 msgid "%{fn} will never be valid"
 msgstr ""
 
-#: test_validations.rb:1542
+#: test_validations.rb:1522
 msgid "will never be valid"
 msgstr ""
 
-#: test_validations.rb:1566 test_validations.rb:1612 test_validations.rb:1695
-#: test_validations.rb:1741 test_validations.rb:1780 test_validations.rb:1818
-#: test_validations.rb:1863 test_validations.rb:1899 test_validations.rb:1946
+#: test_validations.rb:1546 test_validations.rb:1592 test_validations.rb:1675
+#: test_validations.rb:1721 test_validations.rb:1760 test_validations.rb:1798
+#: test_validations.rb:1843 test_validations.rb:1879 test_validations.rb:1926
 msgid "%{fn} contains 'single' and \"double\" quotes"
 msgstr ""
 
-#: test_validations.rb:1589 test_validations.rb:1637 test_validations.rb:1718
-#: test_validations.rb:1764 test_validations.rb:1802 test_validations.rb:1840
-#: test_validations.rb:1886 test_validations.rb:1923 test_validations.rb:1977
+#: test_validations.rb:1569 test_validations.rb:1617 test_validations.rb:1698
+#: test_validations.rb:1744 test_validations.rb:1782 test_validations.rb:1820
+#: test_validations.rb:1866 test_validations.rb:1903 test_validations.rb:1957
 msgid "This string contains 'single' and \"double\" quotes"
 msgstr ""
 
-#: test_validations.rb:2548
+#: test_validations.rb:2517
 msgid "smaller than %{count}"
 msgstr ""
 
-#: test_validations.rb:2555
+#: test_validations.rb:2524
 msgid "greater than %{count}"
 msgstr ""
