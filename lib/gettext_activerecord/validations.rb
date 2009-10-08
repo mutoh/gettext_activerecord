@@ -148,7 +148,9 @@ module ActiveRecord #:nodoc:
     alias_method_chain :full_messages, :gettext_activerecord 
 
     private
-    def localize_error_message(attr, obj, append_field) # :nodoc:
+    def localize_error_message(attr, object, append_field) # :nodoc:
+     obj =  object.respond_to?(:message) ? object.message : object
+
       msgid, count, value = obj, 0, ""
       if obj.kind_of? Hash
         msgid = obj[:default].select{|v| v.is_a? String}[0]
