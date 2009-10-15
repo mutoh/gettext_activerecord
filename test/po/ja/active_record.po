@@ -229,7 +229,7 @@ msgstr "不器用な魔術師タイプ"
 
 #: test_validations.rb:-
 msgid "IneptWizard|Created at"
-msgstr "更新日"
+msgstr "生成日"
 
 #: test_validations.rb:-
 msgid "IneptWizard|Updated at"
@@ -253,7 +253,7 @@ msgstr "ロックバージョン"
 
 #: test_validations.rb:-
 msgid "ProtectedPerson|Created at"
-msgstr "更新日"
+msgstr "生成日"
 
 #: test_validations.rb:-
 msgid "ProtectedPerson|Updated at"
@@ -277,7 +277,7 @@ msgstr "手品師タイプ"
 
 #: test_validations.rb:-
 msgid "Conjurer|Created at"
-msgstr "更新日"
+msgstr "生成日"
 
 #: test_validations.rb:-
 msgid "Conjurer|Updated at"
@@ -301,7 +301,7 @@ msgstr "奇術師タイプ"
 
 #: test_validations.rb:-
 msgid "Thaumaturgist|Created at"
-msgstr "更新日"
+msgstr "生成日"
 
 #: test_validations.rb:-
 msgid "Thaumaturgist|Updated at"
