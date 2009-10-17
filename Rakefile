@@ -87,7 +87,11 @@ end
 ############################################################
 
 Rake::RDocTask.new { |rdoc|
-  allison = `allison --path`.chop
+  begin
+    allison = `allison --path`.chop
+  rescue
+    allison = ''
+  end
   rdoc.rdoc_dir = 'doc'
   rdoc.title    = "gettext_activerecord API Reference"
   rdoc.options << '--line-numbers' << '--inline-source'
