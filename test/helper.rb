@@ -12,7 +12,7 @@ require 'active_record'
 
 # use local gettext or current gettext gem
 begin
-  $LOAD_PATH.unshift ENV["GETTEXT_LIB_PATH"] || "../../gettext/lib"
+  $LOAD_PATH.unshift ENV["GETTEXT_LIB_PATH"] || "../../gettext/lib:../"
   require 'gettext'
 rescue LoadError
   gem 'gettext', '>=2.0.0'

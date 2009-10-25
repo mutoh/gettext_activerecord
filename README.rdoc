@@ -25,15 +25,10 @@ using Ruby-GetText-Package.
     (sudo/su on POSIX system)
     gem uninstall gettext
 
-    #from github (edge/unstable)
+    #from rubyforge 
     (sudo/su on POSIX system)
     gem install locale
-    gem install mutoh-gettext -s http://gems.github.com/
-
-    #from rubyforge (stable)
-    (sudo/su on POSIX system)
-    gem install locale
-    gem install gettext
+    gem install gettext_activerecord
 
 == Usage
 === without Rails
@@ -88,6 +83,7 @@ using Ruby-GetText-Package.
 See gettext_rails [http://github.com/mutoh/gettext_rails/tree/master]
 
 == Support matrix
+* gettext_activerecord-2.1.0 - rails-2.3.2,2.3.3,2.3.4
 * gettext_activerecord-2.0.2 - rails-2.3.2
 * gettext_activerecord-2.0.1 - rails-2.3.2
 * gettext_activerecord-2.0.0 - rails-2.3.2

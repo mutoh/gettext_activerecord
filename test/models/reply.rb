@@ -1,6 +1,6 @@
 require 'models/topic'
 
-class Reply < Topic
+class Reply < Topic  # ActiveRecord::Base
   N_("Reply|Topic")  # Need to define relation table names explicity 
                      # if you use it in validations.
 

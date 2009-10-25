@@ -4,14 +4,13 @@
   Copyright (C) 2005-2009  Masao Mutoh
  
   You may redistribute it and/or modify it under the same
-  license terms as Ruby.
+  license terms as Ruby or LGPL.
 
-  $Id$
 =end
 
 require 'gettext'
 require 'gettext/tools/rgettext'
-require 'gettext/parser/ruby'
+require 'gettext/tools/parser/ruby'
 
 include GetText
 
@@ -146,22 +145,16 @@ module GetText
         end
       end
       if RubyParser.target?(file)
-        targets = RubyParser.parse(file, targets)
+        targets += RubyParser.parse(file)
       end
-      targets.uniq!
       targets
     end
 
     def add_target(targets, file, msgid) # :nodoc:
-      file_lineno = "#{file}:-"
-      key_existed = targets.assoc(msgid)
-      if key_existed 
-        unless targets[targets.index(key_existed)].include?(file_lineno)
-          targets[targets.index(key_existed)] = key_existed << file_lineno
-        end
-      else
-        targets << [msgid, "#{file}:-"]
-      end
+      po = PoMessage.new(:normal)
+      po.msgid = msgid
+      po.sources << "#{file}:-"
+      targets << po
       targets
     end
 
