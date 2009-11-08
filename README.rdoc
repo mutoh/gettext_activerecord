@@ -157,7 +157,7 @@ LGPL(Lesser General Public License: http://www.gnu.org/licenses/lgpl-3.0.txt).
 * Greek(el)                 - 2.0.0
 * Hungarian(hu)             - 2.0.0
 * Italian(it)               - 1.6.0 (old)
-* Japanese(ja)              - 2.0.2
+* Japanese(ja)              - 2.1.0
 * Korean(ko)                - 1.9.0 (old)
 * Latvian(lv)               - 2.0.0 
 * Norwegian(nb)             - 2.0.0
