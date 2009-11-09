@@ -1,3 +1,12 @@
+= gettext_activerecord-2.0.5 (2009-11-11)
+ * make test task visible in "rake -T" [by Vladimir Dobriakov]
+ * Update to user column_mapping.  [by hallelujah]
+ * Add active_record 2.3.4 support [by hallelujah]
+ * Update license information (explicit to use Ruby's or LGPL).
+   [Pointed out by Masateru Yoshikawa]
+ * Update to work with gettext-2.1.0.
+ * Fixed bugs [by hallelujah, Vladimir Dobriakov, Masao Mutoh]
+
 = gettext_activerecord-2.0.4 (2009-05-23)
  * Updated version/dependencies.
 
