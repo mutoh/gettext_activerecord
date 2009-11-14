@@ -1,4 +1,4 @@
-= gettext_activerecord-2.0.5 (2009-11-11)
+= gettext_activerecord-2.1.0 (2009-11-14)
  * make test task visible in "rake -T" [by Vladimir Dobriakov]
  * Update to user column_mapping.  [by hallelujah]
  * Add active_record 2.3.4 support [by hallelujah]
