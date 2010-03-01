@@ -40,6 +40,6 @@ end
 desc 'Run all tests'
 task :test do
   Dir.glob("test_*.rb").each do |path|
-    ruby "-I../lib:../../locale/lib", "-I#{gettext_path}", "-rubygems", path rescue nil
+    ruby "-I./:../lib:../../locale/lib", "-I#{gettext_path}", "-rubygems", path rescue nil
   end
 end

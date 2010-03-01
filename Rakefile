@@ -118,7 +118,7 @@ desc 'Run tests'
 task :test do
   cd "test"
   Dir.glob("test_*.rb").each do |v|
-    ruby "-Ilib:../../locale/lib:../../gettext/lib #{v}"
+    ruby "-Ilib:.:../../locale/lib:../../gettext/lib #{v}"
   end
   cd ".."
 end
