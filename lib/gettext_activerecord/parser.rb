@@ -183,7 +183,8 @@ module GetText
               require_rails 'gettext_activerecord'
             end
             begin
-              yaml = YAML.load(IO.read(@config[:db_yml]))
+              require 'erb'
+              yaml = YAML.load(ERB.new(IO.read(@config[:db_yml])))
               if yaml[@config[:db_mode]]
                 ActiveRecord::Base.establish_connection(yaml[@config[:db_mode]])
               else
