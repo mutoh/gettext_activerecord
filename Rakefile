@@ -65,7 +65,7 @@ spec = Gem::Specification.new do |s|
   s.files = FileList['**/*'].to_a.select{|v| v !~ /pkg|git/}
   s.require_path = 'lib'
   s.add_dependency('gettext', '>= 2.1.0')
-  s.add_dependency('activerecord', '>= 2.3.2')
+  s.add_dependency('activerecord', '~> 2.3.2')
   s.has_rdoc = true
   s.description = 'Localization support for ActiveRecord by Ruby-GetText-Package.'
 end
