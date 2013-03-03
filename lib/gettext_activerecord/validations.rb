@@ -163,16 +163,18 @@ module ActiveRecord #:nodoc:
       msgstr = @base.gettext(msgid)
       msgstr = _(msgid) if msgstr == msgid 
       msgstr = msgstr.gsub("%{fn}", "%{attribute}").gsub("%d", "%{count}").gsub("%{val}", "%{value}")  # for backward compatibility.
+      replacement = {:count => count, :value => value}
       if attr == "base"
         full_message = msgstr
       elsif /%\{attribute\}/ =~ msgstr
-        full_message = msgstr % {:attribute => @base.class.human_attribute_name(attr)}
+        full_message = msgstr
+        replacement[:attribute] = @base.class.human_attribute_name(attr)
       elsif append_field
         full_message = @base.class.human_attribute_name(attr) + " " + msgstr
       else
         full_message = msgstr
       end
-      full_message % {:count => count, :value => value}
+      full_message % replacement
     end
 
     def localize_error_messages(append_field = true) # :nodoc:
